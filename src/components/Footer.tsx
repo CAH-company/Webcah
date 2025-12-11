@@ -26,10 +26,14 @@ export const Footer = ({ onNavigate }: FooterProps) => (
         >
           Kontakt
         </button>
-        <button className="hover:text-white transition-colors">Prywatność</button>
+        <button
+          onClick={() => onNavigate("home")}
+          className="hover:text-white transition-colors"
+        >
+          Prywatność
+        </button>
       </div>
       <div className="opacity-40">© 2025 CAH.</div>
     </div>
   </footer>
 );
-

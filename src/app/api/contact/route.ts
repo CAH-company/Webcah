@@ -35,7 +35,8 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json({ message: "Zgłoszenie wysłane." });
-  } catch {
+  } catch (error) {
+    console.error("Webhook error:", error);
     return NextResponse.json(
       { message: "Wystąpił błąd podczas łączenia z webhookiem." },
       { status: 502 },

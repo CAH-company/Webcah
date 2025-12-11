@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const brandFont = localFont({
-  src: "../../public/fonts/DejaVuSans.ttf",
+  src: "./fonts/DejaVuSans.ttf",
   variable: "--font-brand",
   display: "swap",
 });
