@@ -34,7 +34,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
           <div className="relative z-10 h-full flex flex-col justify-between">
             <div>
               <h3 className="text-3xl font-bold mb-4 brand-font">
-                Automatyzacja RPA
+                Automatyzacje
               </h3>
               <p className="text-white/60 max-w-md">
                 Robotic Process Automation. Tworzymy cyfrowych pracowników, którzy
@@ -61,14 +61,14 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
             <div className="w-full flex justify-between items-start mb-8">
               <h3 className="text-3xl font-bold brand-font">
                 AI & <br />
-                Machine Learning
+                Wdrożenia CRM
               </h3>
               <Zap className="opacity-50" size={32} />
             </div>
             <p className="opacity-80 font-medium leading-relaxed mb-6">
-              Wdrażamy modele językowe (LLM) i systemy wizyjne do Twojej firmy.
-              Automatyczna obsługa klienta, analiza dokumentów i predykcja
-              sprzedaży.
+              Wdrażamy, optymalizujemy i automatyzujemy systemy CRM.
+              Sprawiamy, że Twój zespół sprzedaży może wreszcie skupić się
+              na zamykaniu transakcji, a nie na wprowadzaniu danych
             </p>
           </div>
           <ul className="space-y-4 font-mono text-sm opacity-80 border-t border-black/20 pt-6">
@@ -101,7 +101,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
           <TrendingUp style={{ color: accentColor }} size={40} className="mb-4" />
           <div>
             <h3 className="text-2xl font-bold mb-2 brand-font">
-              Business Intelligence
+              Consulting Technologiczny
             </h3>
             <p className="text-white/60 text-sm">
               Dashboardy w PowerBI i Tableau. Zamieniamy suche dane w decyzje
