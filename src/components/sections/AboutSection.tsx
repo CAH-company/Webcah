@@ -17,14 +17,14 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             O nas
           </h4>
           <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight brand-font">
-            Inżynierowie
+            Technologia ma służyć ludziom,
             <br />
-            Twojego Spokoju.
+            nie odwrotnie
           </h2>
           <p className="text-xl text-white/70 mb-8 font-light">
-            CAH to hub technologiczny z Krakowa. Nie jesteśmy typowym software
-            housem. Jesteśmy partnerem, który rozumie biznes. Wierzymy, że ludzki
-            potencjał jest zbyt cenny, by marnować go na &quot;kopiuj-wklej&quot;.
+            aszą misją jest odzyskiwanie najcenniejszego zasobu – czasu.
+            Wierzymy, że automatyzacja i AI to narzędzia, które pozwalają firmom
+            skupić się na tym, co najważniejsze: kreatywności, strategii i relacjach;.
           </p>
           <div className="flex gap-8">
             <div>
@@ -32,7 +32,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
                 style={{ color: accentColor }}
                 className="text-5xl font-bold brand-font"
               >
-                50+
+                3+
               </span>
               <p className="text-sm uppercase tracking-wider opacity-60 mt-2">
                 Zrealizowanych
@@ -45,12 +45,12 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
                 style={{ color: accentColor }}
                 className="text-5xl font-bold brand-font"
               >
-                300%
+                100%
               </span>
               <p className="text-sm uppercase tracking-wider opacity-60 mt-2">
-                Średnie
+                Zadowolonych
                 <br />
-                ROI Klienta
+                Klientów
               </p>
             </div>
           </div>
@@ -73,7 +73,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         className="text-3xl font-bold mb-12 border-l-4 pl-6 brand-font"
         style={{ borderColor: accentColor }}
       >
-        Zarząd CAH
+        Zespoł CAH
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="bg-[#111] border border-white/10 rounded-3xl overflow-hidden group hover:border-[#4ed5cd] transition-colors">
@@ -92,7 +92,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
               <Linkedin size={20} />
             </div>
             <h4 className="text-2xl font-bold text-white brand-font">
-              Jan Kowalski
+              Marek Łazarski
             </h4>
             <p
               style={{ color: accentColor }}
@@ -124,7 +124,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
               <Linkedin size={20} />
             </div>
             <h4 className="text-2xl font-bold text-white brand-font">
-              Anna Nowak
+              Michał Grabczyński
             </h4>
             <p
               style={{ color: accentColor }}
