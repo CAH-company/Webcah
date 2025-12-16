@@ -14,7 +14,7 @@ type ServicesSectionProps = {
 };
 
 export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
-  <section className="pt-40 pb-24 px-6 bg-[#0a0a0a] min-h-screen animate-fade-in">
+  <section className="pt-40 pb-24 px-6 bg-cah-bg min-h-screen animate-fade-in">
     <div className="container mx-auto">
       <div className="mb-16 border-b border-white/10 pb-8">
         <h2 className="text-5xl md:text-7xl font-bold mb-6 brand-font">
@@ -27,8 +27,8 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
-        <div className="md:col-span-2 bg-[#111] border border-white/10 p-8 rounded-3xl hover-card relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-100 transition-opacity duration-500 text-[#4ed5cd]">
+        <div className="md:col-span-2 bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-100 transition-opacity duration-500 text-cah-accent">
             <Cpu size={140} />
           </div>
           <div className="relative z-10 h-full flex flex-col justify-between">
@@ -84,7 +84,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
           </ul>
         </div>
 
-        <div className="bg-[#111] border border-white/10 p-8 rounded-3xl hover-card group flex flex-col justify-between">
+        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card group flex flex-col justify-between">
           <Box style={{ color: accentColor }} size={40} className="mb-4" />
           <div>
             <h3 className="text-2xl font-bold mb-2 brand-font">
@@ -97,7 +97,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
           </div>
         </div>
 
-        <div className="bg-[#111] border border-white/10 p-8 rounded-3xl hover-card group flex flex-col justify-between">
+        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card group flex flex-col justify-between">
           <TrendingUp style={{ color: accentColor }} size={40} className="mb-4" />
           <div>
             <h3 className="text-2xl font-bold mb-2 brand-font">
@@ -110,7 +110,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
           </div>
         </div>
 
-        <div className="md:col-span-2 bg-[#111] border border-white/10 p-8 rounded-3xl hover-card flex items-center justify-between group">
+        <div className="md:col-span-2 bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card flex items-center justify-between group">
           <div className="max-w-lg">
             <h3 className="text-2xl font-bold mb-2 flex items-center gap-3 brand-font">
               <Database style={{ color: accentColor }} size={24} /> Audyt & Konsulting
@@ -128,7 +128,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
 
         <div className="bg-[#151515] border border-white/5 p-8 rounded-3xl hover-card flex flex-col justify-center items-center text-center group">
           <Code
-            className="mb-4 opacity-50 group-hover:text-[#4ed5cd] group-hover:opacity-100 transition-all"
+            className="mb-4 opacity-50 group-hover:text-cah-accent group-hover:opacity-100 transition-all"
             size={48}
           />
           <h3 className="text-xl font-bold mb-1 brand-font">Low-Code Apps</h3>

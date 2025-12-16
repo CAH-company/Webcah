@@ -1,11 +1,15 @@
-import { HomeSection } from "@/components/sections/HomeSection";
+'use client';
 
-export default function Home() {
+import { ContactSection } from "@/components/sections/ContactSection";
+
+const accentColor = "#4ed5cd";
+
+export default function ContactPage() {
   return (
     <div className="min-h-screen bg-cah-bg text-white font-sans selection:bg-cah-accent selection:text-black overflow-x-hidden">
       <div className="noise-bg" />
       <main className="min-h-screen">
-        <HomeSection />
+        <ContactSection accentColor={accentColor} />
       </main>
     </div>
   );

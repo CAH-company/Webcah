@@ -6,7 +6,7 @@ type AboutSectionProps = {
 };
 
 export const AboutSection = ({ accentColor }: AboutSectionProps) => (
-  <section className="pt-40 pb-24 px-6 bg-[#0a0a0a] min-h-screen animate-fade-in">
+  <section className="pt-40 pb-24 px-6 bg-cah-bg min-h-screen animate-fade-in">
     <div className="container mx-auto max-w-6xl">
       <div className="flex flex-col md:grid md:grid-cols-2 gap-16 items-center mb-24">
         <div>
@@ -56,7 +56,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
           </div>
         </div>
 
-        <div className="relative w-full aspect-square md:aspect-auto md:h-full min-h-[400px] border border-white/10 rounded-3xl overflow-hidden flex items-center justify-center bg-[#111]">
+        <div className="relative w-full aspect-square md:aspect-auto md:h-full min-h-[400px] border border-white/10 rounded-3xl overflow-hidden flex items-center justify-center bg-cah-bg-card">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 grayscale mix-blend-overlay" />
           <div className="relative z-10 text-center p-8">
             <div className="w-48 h-48 mx-auto border-2 border-white/10 flex items-center justify-center rounded-lg bg-black/50 mb-4">
@@ -76,7 +76,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         Zespoł CAH
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-[#111] border border-white/10 rounded-3xl overflow-hidden group hover:border-[#4ed5cd] transition-colors">
+        <div className="bg-cah-bg-card border border-white/10 rounded-3xl overflow-hidden group hover:border-cah-accent transition-colors">
           <div className="h-80 overflow-hidden relative">
             <Image
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
@@ -88,7 +88,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent h-32" />
           </div>
           <div className="p-8 relative">
-            <div className="absolute -top-8 right-8 bg-[#4ed5cd] p-3 rounded-full text-black">
+            <div className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black">
               <Linkedin size={20} />
             </div>
             <h4 className="text-2xl font-bold text-white brand-font">
@@ -108,7 +108,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
           </div>
         </div>
 
-        <div className="bg-[#111] border border-white/10 rounded-3xl overflow-hidden group hover:border-[#4ed5cd] transition-colors">
+        <div className="bg-cah-bg-card border border-white/10 rounded-3xl overflow-hidden group hover:border-cah-accent transition-colors">
           <div className="h-80 overflow-hidden relative">
             <Image
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
@@ -120,7 +120,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent h-32" />
           </div>
           <div className="p-8 relative">
-            <div className="absolute -top-8 right-8 bg-[#4ed5cd] p-3 rounded-full text-black">
+            <div className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black">
               <Linkedin size={20} />
             </div>
             <h4 className="text-2xl font-bold text-white brand-font">

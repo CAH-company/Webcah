@@ -23,6 +23,14 @@ type FormState = {
   message: string;
 };
 
+type FieldErrors = {
+  fullName?: string[];
+  email?: string[];
+  phone?: string[];
+  company?: string[];
+  message?: string[];
+};
+
 const initialState: FormState = {
   fullName: "",
   phone: "",
@@ -34,13 +42,19 @@ const initialState: FormState = {
 export const ContactSection = ({ accentColor }: ContactSectionProps) => {
   const [formState, setFormState] = useState<FormState>(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "success" | "error" | "ratelimit">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [rateLimitReset, setRateLimitReset] = useState<string>("");
   const webhookRoute = "/api/contact";
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
+    // Clear field error when user starts typing
+    if (fieldErrors[name as keyof FieldErrors]) {
+      setFieldErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -48,6 +62,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
     setIsSubmitting(true);
     setStatus("idle");
     setErrorMessage("");
+    setFieldErrors({});
 
     try {
       const response = await fetch(webhookRoute, {
@@ -59,8 +74,28 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
       });
 
       const payload = await response.json().catch(() => null);
+      
+      if (response.status === 429) {
+        // Rate limit exceeded
+        setStatus("ratelimit");
+        const resetTime = response.headers.get('X-RateLimit-Reset');
+        if (resetTime) {
+          setRateLimitReset(new Date(resetTime).toLocaleTimeString('pl-PL'));
+        }
+        setErrorMessage(payload?.message || "Za dużo requestów. Spróbuj ponownie później.");
+        return;
+      }
+
       if (!response.ok) {
-        throw new Error(payload?.message ?? "Nie udało się wysłać formularza");
+        // Handle validation errors
+        if (payload?.errors) {
+          setFieldErrors(payload.errors);
+          setErrorMessage("Proszę poprawić błędy w formularzu");
+        } else {
+          setErrorMessage(payload?.message ?? "Nie udało się wysłać formularza");
+        }
+        setStatus("error");
+        return;
       }
 
       setStatus("success");
@@ -78,7 +113,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
   };
 
   return (
-    <section className="pt-40 pb-24 px-6 bg-[#0a0a0a] min-h-screen flex items-center animate-fade-in">
+    <section className="pt-40 pb-24 px-6 bg-cah-bg min-h-screen flex items-center animate-fade-in">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <p
@@ -99,19 +134,19 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
 
           <div className="space-y-6">
             <div className="flex items-center gap-4 text-xl group">
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-[#4ed5cd] group-hover:bg-[#4ed5cd] group-hover:text-black transition-all">
+              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Mail size={20} />
               </div>
               hello@cah.pl
             </div>
             <div className="flex items-center gap-4 text-xl group">
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-[#4ed5cd] group-hover:bg-[#4ed5cd] group-hover:text-black transition-all">
+              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Globe size={20} />
               </div>
               Kraków, Polska
             </div>
             <div className="flex items-center gap-4 text-xl group">
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-[#4ed5cd] group-hover:bg-[#4ed5cd] group-hover:text-black transition-all">
+              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Linkedin size={20} />
               </div>
               /cracow-automations-hub
@@ -120,7 +155,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
         </div>
 
         <form
-          className="bg-[#111] p-8 md:p-12 rounded-3xl border border-white/10 space-y-6 shadow-2xl"
+          className="bg-cah-bg-card p-8 md:p-12 rounded-3xl border border-white/10 space-y-6 shadow-2xl"
           onSubmit={handleSubmit}
         >
           <div>
@@ -133,9 +168,13 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
               value={formState.fullName}
               onChange={handleChange}
               required
+              maxLength={100}
               className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus:outline-none transition-colors"
               placeholder="Jan Kowalski"
             />
+            {fieldErrors.fullName && (
+              <p className="text-red-400 text-xs mt-1">{fieldErrors.fullName[0]}</p>
+            )}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -148,9 +187,13 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
                 name="phone"
                 value={formState.phone}
                 onChange={handleChange}
+                maxLength={20}
                 className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus:outline-none transition-colors"
                 placeholder="+48 000 000 000"
               />
+              {fieldErrors.phone && (
+                <p className="text-red-400 text-xs mt-1">{fieldErrors.phone[0]}</p>
+              )}
             </div>
             <div>
               <label className="block text-xs uppercase tracking-widest text-white/50 mb-2 font-bold flex items-center gap-2 brand-font">
@@ -162,9 +205,13 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
                 value={formState.email}
                 onChange={handleChange}
                 required
+                maxLength={255}
                 className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus:outline-none transition-colors"
                 placeholder="jan@firma.pl"
               />
+              {fieldErrors.email && (
+                <p className="text-red-400 text-xs mt-1">{fieldErrors.email[0]}</p>
+              )}
             </div>
           </div>
 
@@ -177,9 +224,13 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
               name="company"
               value={formState.company}
               onChange={handleChange}
+              maxLength={100}
               className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus:outline-none transition-colors"
               placeholder="Twoja Firma Sp. z o.o."
             />
+            {fieldErrors.company && (
+              <p className="text-red-400 text-xs mt-1">{fieldErrors.company[0]}</p>
+            )}
           </div>
 
           <div>
@@ -191,9 +242,13 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
               name="message"
               value={formState.message}
               onChange={handleChange}
+              maxLength={2000}
               className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus:outline-none transition-colors resize-none"
               placeholder="Opisz krótko swój proces..."
             />
+            {fieldErrors.message && (
+              <p className="text-red-400 text-xs mt-1">{fieldErrors.message[0]}</p>
+            )}
           </div>
 
           <button
@@ -211,11 +266,22 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
 
           {status === "success" && (
             <p className="text-[#4ed5cd] text-sm font-medium">
-              Dziękujemy! Formularz został wysłany.
+              ✓ Dziękujemy! Formularz został wysłany. Odezwiemy się w ciągu 24h!
             </p>
           )}
-          {status === "error" && (
-            <p className="text-red-400 text-sm font-medium">{errorMessage}</p>
+          {status === "ratelimit" && (
+            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded p-3 text-yellow-300 text-sm">
+              <p className="font-medium">⚠️ {errorMessage}</p>
+              {rateLimitReset && (
+                <p className="text-xs mt-1">Spróbuj ponownie po: {rateLimitReset}</p>
+              )}
+            </div>
+          )}
+          {status === "error" && !fieldErrors && (
+            <p className="text-red-400 text-sm font-medium">✗ {errorMessage}</p>
+          )}
+          {status === "error" && Object.keys(fieldErrors).length > 0 && (
+            <p className="text-red-400 text-sm font-medium">✗ {errorMessage}</p>
           )}
         </form>
       </div>
