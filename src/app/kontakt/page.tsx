@@ -2,6 +2,9 @@
 
 import { ContactSection } from "@/components/sections/ContactSection";
 
+// Note: metadata export doesn't work with 'use client', but it's defined in kontakt/layout.tsx
+// Contact page needs 'use client' for form interactivity
+
 const accentColor = "#4ed5cd";
 
 export default function ContactPage() {

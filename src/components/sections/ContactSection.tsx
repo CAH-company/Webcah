@@ -265,7 +265,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
           </button>
 
           {status === "success" && (
-            <p className="text-[#4ed5cd] text-sm font-medium">
+            <p className="text-cah-accent text-sm font-medium">
               ✓ Dziękujemy! Formularz został wysłany. Odezwiemy się w ciągu 24h!
             </p>
           )}
@@ -277,11 +277,10 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
               )}
             </div>
           )}
-          {status === "error" && !fieldErrors && (
-            <p className="text-red-400 text-sm font-medium">✗ {errorMessage}</p>
-          )}
-          {status === "error" && Object.keys(fieldErrors).length > 0 && (
-            <p className="text-red-400 text-sm font-medium">✗ {errorMessage}</p>
+          {status === "error" && (
+            <p className="text-red-400 text-sm font-medium">
+              ✗ {errorMessage}
+            </p>
           )}
         </form>
       </div>
