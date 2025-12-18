@@ -22,9 +22,9 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             nie odwrotnie
           </h2>
           <p className="text-xl text-white/70 mb-8 font-light">
-            aszą misją jest odzyskiwanie najcenniejszego zasobu – czasu.
+            Naszą misją jest odzyskiwanie najcenniejszego zasobu – czasu. 
             Wierzymy, że automatyzacja i AI to narzędzia, które pozwalają firmom
-            skupić się na tym, co najważniejsze: kreatywności, strategii i relacjach;.
+            skupić się na tym, co najważniejsze:  kreatywności, strategii i relacjach. 
           </p>
           <div className="flex gap-8">
             <div>
@@ -57,7 +57,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         </div>
 
         <div className="relative w-full aspect-square md:aspect-auto md:h-full min-h-[400px] border border-white/10 rounded-3xl overflow-hidden flex items-center justify-center bg-cah-bg-card">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 grayscale mix-blend-overlay" />
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 grayscale mix-blend-luminosity" />
           <div className="relative z-10 text-center p-8">
             <div className="w-48 h-48 mx-auto border-2 border-white/10 flex items-center justify-center rounded-lg bg-black/50 mb-4">
               <span className="text-xs text-white/50">TU WSTAW LOGO</span>
@@ -73,9 +73,10 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         className="text-3xl font-bold mb-12 border-l-4 pl-6 brand-font"
         style={{ borderColor: accentColor }}
       >
-        Zespoł CAH
+        Zespół CAH
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Marek Łazarski - CEO */}
         <div className="bg-cah-bg-card border border-white/10 rounded-3xl overflow-hidden group hover:border-cah-accent transition-colors">
           <div className="h-80 overflow-hidden relative">
             <Image
@@ -88,9 +89,15 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent h-32" />
           </div>
           <div className="p-8 relative">
-            <div className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black">
-              <Linkedin size={20} />
-            </div>
+            <a
+              href="https://www.linkedin.com/in/marek-lazarski"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black hover:bg-white transition-colors cursor-pointer group/icon"
+              aria-label="LinkedIn profil Marek Łazarski"
+            >
+              <Linkedin size={20} className="group-hover/icon:scale-110 transition-transform" />
+            </a>
             <h4 className="text-2xl font-bold text-white brand-font">
               Marek Łazarski
             </h4>
@@ -108,6 +115,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
           </div>
         </div>
 
+        {/* Michał Grabczyński - CTO */}
         <div className="bg-cah-bg-card border border-white/10 rounded-3xl overflow-hidden group hover:border-cah-accent transition-colors">
           <div className="h-80 overflow-hidden relative">
             <Image
@@ -120,9 +128,15 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent h-32" />
           </div>
           <div className="p-8 relative">
-            <div className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black">
-              <Linkedin size={20} />
-            </div>
+            <a
+              href="https://www.linkedin.com/in/michal-grabczynski"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black hover:bg-white transition-colors cursor-pointer group/icon"
+              aria-label="LinkedIn profil Michał Grabczyński"
+            >
+              <Linkedin size={20} className="group-hover/icon:scale-110 transition-transform" />
+            </a>
             <h4 className="text-2xl font-bold text-white brand-font">
               Michał Grabczyński
             </h4>
