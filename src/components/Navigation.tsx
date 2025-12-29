@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export const Navigation = () => {
   const pathname = usePathname();
@@ -29,7 +30,13 @@ export const Navigation = () => {
         >
           <div className="h-8 md:h-10 w-auto flex items-center justify-center">
             <div className="h-full w-20 md:w-24 bg-white/10 border border-white/20 flex items-center justify-center rounded text-[8px] md:text-[10px] text-white/50 tracking-widest">
-              [LOGO IMG]
+            <Image 
+              src="/logo2.png" 
+              alt="CAH Logo" 
+              width={96} 
+              height={40} 
+              className="h-full w-auto"
+            />
             </div>
           </div>
           <span className="hidden lg:block text-sm font-normal tracking-widest opacity-60 border-l border-white/20 pl-6 brand-font">

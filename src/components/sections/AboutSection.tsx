@@ -59,8 +59,14 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         <div className="relative w-full aspect-square md:aspect-auto md:h-full min-h-[400px] border border-white/10 rounded-3xl overflow-hidden flex items-center justify-center bg-cah-bg-card">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 grayscale mix-blend-overlay" />
           <div className="relative z-10 text-center p-8">
-            <div className="w-48 h-48 mx-auto border-2 border-white/10 flex items-center justify-center rounded-lg bg-black/50 mb-4">
-              <span className="text-xs text-white/50">TU WSTAW LOGO</span>
+          <div className="w-48 h-48 mx-auto border-2 border-white/10 flex items-center justify-center rounded-lg bg-black/50 mb-4 p-8">
+              <Image 
+                src="/logo2.png" 
+                alt="CAH Logo" 
+                width={192} 
+                height={192} 
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="tracking-[0.5em] text-sm uppercase opacity-70 brand-font">
               Cracow HQ
@@ -79,8 +85,8 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         <div className="bg-cah-bg-card border border-white/10 rounded-3xl overflow-hidden group hover:border-cah-accent transition-colors">
           <div className="h-80 overflow-hidden relative">
             <Image
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
-              alt="CEO"
+              src="img_maro.jpg"
+              alt="Marek Łazarski-CEO"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"
               className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
@@ -111,8 +117,8 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         <div className="bg-cah-bg-card border border-white/10 rounded-3xl overflow-hidden group hover:border-cah-accent transition-colors">
           <div className="h-80 overflow-hidden relative">
             <Image
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
-              alt="CTO"
+              src="img_michal.jpg"
+              alt="Michał Grabczyński-CTO"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"
               className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
