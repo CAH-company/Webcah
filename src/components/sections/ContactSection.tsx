@@ -5,7 +5,8 @@ import { useState } from "react";
 import {
   ArrowRight,
   Building2,
-  Globe,
+  Facebook,
+  Instagram,
   Linkedin,
   Mail,
   Phone,
@@ -24,7 +25,7 @@ type FormState = {
 };
 
 type FieldErrors = {
-  fullName?: string[];
+  fullName?:  string[];
   email?: string[];
   phone?: string[];
   company?: string[];
@@ -33,7 +34,7 @@ type FieldErrors = {
 
 const initialState: FormState = {
   fullName: "",
-  phone: "",
+  phone:  "",
   email: "",
   company: "",
   message: "",
@@ -49,7 +50,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
   const webhookRoute = "/api/contact";
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
+    const { name, value } = event. target;
     setFormState((prev) => ({ ...prev, [name]: value }));
     // Clear field error when user starts typing
     if (fieldErrors[name as keyof FieldErrors]) {
@@ -67,8 +68,8 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
     try {
       const response = await fetch(webhookRoute, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+        headers:  {
+          "Content-Type":  "application/json",
         },
         body: JSON.stringify(formState),
       });
@@ -86,13 +87,13 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
         return;
       }
 
-      if (!response.ok) {
+      if (! response.ok) {
         // Handle validation errors
         if (payload?.errors) {
           setFieldErrors(payload.errors);
           setErrorMessage("Proszę poprawić błędy w formularzu");
         } else {
-          setErrorMessage(payload?.message ?? "Nie udało się wysłać formularza");
+          setErrorMessage(payload?.message ??  "Nie udało się wysłać formularza");
         }
         setStatus("error");
         return;
@@ -105,7 +106,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : "Wystąpił błąd podczas wysyłki formularza",
+          :  "Wystąpił błąd podczas wysyłki formularza",
       );
     } finally {
       setIsSubmitting(false);
@@ -128,29 +129,53 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
             Współpracę
           </h2>
           <p className="text-white/60 text-lg mb-12 max-w-md">
-            Opisz swój proces lub problem. Oddzwonimy w ciągu 24h z wstępną
-            analizą i wyceną.
+            Opisz swój proces lub problem.  Oddzwonimy w ciągu 24h z wstępną
+            analizą i wyceną. 
           </p>
 
           <div className="space-y-6">
-            <div className="flex items-center gap-4 text-xl group">
+            <a 
+              href="mailto:hello@cah.pl"
+              className="flex items-center gap-4 text-xl group cursor-pointer"
+            >
               <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Mail size={20} />
               </div>
-              hello@cah.pl
-            </div>
-            <div className="flex items-center gap-4 text-xl group">
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
-                <Globe size={20} />
-              </div>
-              Kraków, Polska
-            </div>
-            <div className="flex items-center gap-4 text-xl group">
+              <span className="group-hover:text-cah-accent transition-colors">hello@cah.pl</span>
+            </a>
+            <a 
+              href="https://www.linkedin.com/company/cracow-automations-hub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 text-xl group cursor-pointer"
+            >
               <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Linkedin size={20} />
               </div>
-              /cracow-automations-hub
-            </div>
+              <span className="group-hover:text-cah-accent transition-colors">/cracow-automations-hub</span>
+            </a>
+            <a 
+              href="https://www.facebook.com/cracowautomationshub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 text-xl group cursor-pointer"
+            >
+              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
+                <Facebook size={20} />
+              </div>
+              <span className="group-hover:text-cah-accent transition-colors">/cracowautomationshub</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/cracowautomationshub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 text-xl group cursor-pointer"
+            >
+              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
+                <Instagram size={20} />
+              </div>
+              <span className="group-hover: text-cah-accent transition-colors">@cracowautomationshub</span>
+            </a>
           </div>
         </div>
 
@@ -165,15 +190,15 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
             <input
               type="text"
               name="fullName"
-              value={formState.fullName}
+              value={formState. fullName}
               onChange={handleChange}
               required
               maxLength={100}
-              className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus:outline-none transition-colors"
+              className="w-full bg-black border-b border-white/20 p-4 text-white focus: border-[#4ed5cd] focus:outline-none transition-colors"
               placeholder="Jan Kowalski"
             />
             {fieldErrors.fullName && (
-              <p className="text-red-400 text-xs mt-1">{fieldErrors.fullName[0]}</p>
+              <p className="text-red-400 text-xs mt-1">{fieldErrors. fullName[0]}</p>
             )}
           </div>
 
@@ -188,7 +213,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
                 value={formState.phone}
                 onChange={handleChange}
                 maxLength={20}
-                className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus:outline-none transition-colors"
+                className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus: outline-none transition-colors"
                 placeholder="+48 000 000 000"
               />
               {fieldErrors.phone && (
@@ -206,7 +231,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
                 onChange={handleChange}
                 required
                 maxLength={255}
-                className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus:outline-none transition-colors"
+                className="w-full bg-black border-b border-white/20 p-4 text-white focus:border-[#4ed5cd] focus: outline-none transition-colors"
                 placeholder="jan@firma.pl"
               />
               {fieldErrors.email && (
@@ -235,7 +260,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
 
           <div>
             <label className="block text-xs uppercase tracking-widest text-white/50 mb-2 font-bold brand-font">
-              W czym możemy pomóc?
+              W czym możemy pomóc? 
             </label>
             <textarea
               rows={4}
@@ -266,7 +291,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
 
           {status === "success" && (
             <p className="text-cah-accent text-sm font-medium">
-              ✓ Dziękujemy! Formularz został wysłany. Odezwiemy się w ciągu 24h!
+              ✓ Dziękujemy! Formularz został wysłany.  Odezwiemy się w ciągu 24h!
             </p>
           )}
           {status === "ratelimit" && (

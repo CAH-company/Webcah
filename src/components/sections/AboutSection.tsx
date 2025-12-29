@@ -61,7 +61,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
           <div className="relative z-10 text-center p-8">
           <div className="w-48 h-48 mx-auto border-2 border-white/10 flex items-center justify-center rounded-lg bg-black/50 mb-4 p-8">
               <Image 
-                src="/logo2.png" 
+                src="/logo1.svg" 
                 alt="CAH Logo" 
                 width={192} 
                 height={192} 
@@ -85,7 +85,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         <div className="bg-cah-bg-card border border-white/10 rounded-3xl overflow-hidden group hover:border-cah-accent transition-colors">
           <div className="h-80 overflow-hidden relative">
             <Image
-              src="img_maro.jpg"
+              src="/img_maro.jpg"
               alt="Marek Łazarski-CEO"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"
@@ -94,9 +94,15 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent h-32" />
           </div>
           <div className="p-8 relative">
-            <div className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black">
-              <Linkedin size={20} />
-            </div>
+            <a
+              href="https://www.linkedin.com/in/marek-lazarski"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black hover:bg-white transition-colors cursor-pointer group/icon"
+              aria-label="LinkedIn profil Marek Łazarski"
+            >
+              <Linkedin size={20} className="group-hover/icon:scale-110 transition-transform" />
+            </a>
             <h4 className="text-2xl font-bold text-white brand-font">
               Marek Łazarski
             </h4>
@@ -117,7 +123,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         <div className="bg-cah-bg-card border border-white/10 rounded-3xl overflow-hidden group hover:border-cah-accent transition-colors">
           <div className="h-80 overflow-hidden relative">
             <Image
-              src="img_michal.jpg"
+              src="/img_michal.jpg"
               alt="Michał Grabczyński-CTO"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"
@@ -126,9 +132,15 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent h-32" />
           </div>
           <div className="p-8 relative">
-            <div className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black">
-              <Linkedin size={20} />
-            </div>
+            <a
+              href="https://www.linkedin.com/in/Michal Grabczyński"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute -top-8 right-8 bg-cah-accent p-3 rounded-full text-black hover:bg-white transition-colors cursor-pointer group/icon"
+              aria-label="LinkedIn profil Michał Grabczyńśki"
+            >
+              <Linkedin size={20} className="group-hover/icon:scale-110 transition-transform" />
+            </a>
             <h4 className="text-2xl font-bold text-white brand-font">
               Michał Grabczyński
             </h4>

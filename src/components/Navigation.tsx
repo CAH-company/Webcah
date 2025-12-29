@@ -26,12 +26,12 @@ export const Navigation = () => {
       <div className="container mx-auto px-6 relative flex justify-between items-center">
         <Link
           href="/"
-          className="flex items-center gap-4 md:gap-6 cursor-pointer hover:opacity-80 transition-opacity z-10"
+          className="flex items-center hover:opacity-80 transition-opacity z-10"
         >
           <div className="h-8 md:h-10 w-auto flex items-center justify-center">
-            <div className="h-full w-20 md:w-24 bg-white/10 border border-white/20 flex items-center justify-center rounded text-[8px] md:text-[10px] text-white/50 tracking-widest">
+            <div className="h-full w-20 md:w-24 bg-white/10  flex items-center justify-center rounded text-[8px] md:text-[10px] text-white/50 tracking-widest">
             <Image 
-              src="/logo2.png" 
+              src="/logo1.svg" 
               alt="CAH Logo" 
               width={96} 
               height={40} 
@@ -39,12 +39,17 @@ export const Navigation = () => {
             />
             </div>
           </div>
-          <span className="hidden lg:block text-sm font-normal tracking-widest opacity-60 border-l border-white/20 pl-6 brand-font">
-            CRACOW AUTOMATIONS HUB
-          </span>
         </Link>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-8 text-xs md:text-sm tracking-widest uppercase font-medium brand-font">
+          <Link
+            href="/"
+            className={`hover:text-cah-accent transition-colors ${
+              pathname === "/" ?  "text-cah-accent" : ""
+            }`}
+          >
+  Home
+</Link>
           <Link
             href="/uslugi"
             className={`hover:text-cah-accent transition-colors ${
