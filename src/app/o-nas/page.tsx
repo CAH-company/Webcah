@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "O nas - Cracow Automations Hub",
     description:
       "Poznaj zespół CAH. Eksperci w automatyzacji procesów, AI i integracji systemów.",
-    url: "https://cah.pl/o-nas",
+    url: "https://www.cracovautomationhub.pl/o-nas",
     siteName: "Cracow Automations Hub",
     locale: "pl_PL",
     type: "website",

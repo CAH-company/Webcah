@@ -2,23 +2,23 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Usługi - Cracow Automations Hub",
+  title: "Automatyzacja Procesów Biznesowych i AI | Cracow Automations Hub",
   description:
-    "Automatyzacja procesów biznesowych, AI, integracje systemowe, consulting technologiczny i wdrożenia CRM. Kompleksowe usługi CAH.",
+    "optymalizuj swój biznes z CAH. Oferujemy automatyzację procesów, wdrożenia AI oraz systemów CRM. Skontaktuj się z nami i zwiększ efektywność swojej firmy!",
   openGraph: {
-    title: "Usługi - Cracow Automations Hub",
+    title: "Automatyzacja Procesów Biznesowych i AI | Cracow Automations Hub",
     description:
-      "Automatyzacja procesów biznesowych, AI, integracje systemowe, consulting technologiczny i wdrożenia CRM.",
-    url: "https://cah.pl/uslugi",
+      "optymalizuj swój biznes z CAH. Oferujemy automatyzację procesów, wdrożenia AI oraz systemów CRM. Skontaktuj się z nami i zwiększ efektywność swojej firmy!",
+    url: "https://www.cracovautomationhub.pl/uslugi",
     siteName: "Cracow Automations Hub",
     locale: "pl_PL",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Usługi - Cracow Automations Hub",
+    title: "Automatyzacja Procesów Biznesowych i AI | Cracow Automations Hub",
     description:
-      "Automatyzacja procesów biznesowych, AI, integracje systemowe, consulting technologiczny i wdrożenia CRM.",
+      "optymalizuj swój biznes z CAH. Oferujemy automatyzację procesów, wdrożenia AI oraz systemów CRM. Skontaktuj się z nami i zwiększ efektywność swojej firmy!",
   },
 };
 

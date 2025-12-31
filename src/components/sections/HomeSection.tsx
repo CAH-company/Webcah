@@ -9,12 +9,12 @@ export const HomeSection = () => (
     <div className="container mx-auto relative z-10 flex-grow flex flex-col justify-center">
       <div className="max-w-5xl">
         <p className="text-cah-accent tracking-[0.3em] uppercase mb-6 animate-fade-in-up text-sm md:text-base font-bold brand-font">
-          Automatyzacja procesów biznesowych
+          EKOSYSTEMY INTELIGENTNYCH AUTOMATYZACJI
         </p>
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tight mb-8 brand-font">
-          ZMIENIAMY <br />
-          <span className="text-outline">CHAOS</span> W <br />
-          PRECYZJĘ
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[1.1] tracking-tight mb-8 brand-font">
+          Projektujemy <br />
+          <span className="text-outline">cyfrową wydajność </span> <br />
+           Twojej firmy
         </h1>
         <div className="flex flex-col md:flex-row gap-8 items-start md:items-center mt-12 mb-12">
           <Link
@@ -25,8 +25,7 @@ export const HomeSection = () => (
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Link>
           <p className="max-w-xs text-white/60 text-sm leading-relaxed border-l border-white/20 pl-4">
-            Projektujemy dedykowane systemy automatyzacji. Zyskaj czas, zredukuj
-            koszty, wyprzedź konkurencję.
+            Eliminujemy powtarzalne procesy, wdrażając zaawansowane przepływy pracy oparte na n8n i AI. Zmieniamy operacyjny chaos w precyzyjny mechanizm, który pracuje na Twój zysk 24/7.
           </p>
         </div>
       </div>

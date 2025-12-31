@@ -17,14 +17,14 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             O nas
           </h4>
           <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight brand-font">
-            Technologia ma służyć ludziom,
+            Technologia w służbie strategii,
             <br />
             nie odwrotnie
           </h2>
           <p className="text-xl text-white/70 mb-8 font-light">
-            aszą misją jest odzyskiwanie najcenniejszego zasobu – czasu.
-            Wierzymy, że automatyzacja i AI to narzędzia, które pozwalają firmom
-            skupić się na tym, co najważniejsze: kreatywności, strategii i relacjach;.
+            W Cracow Automations Hub wierzymy, że czas to najcenniejszy zasób nowoczesnego przedsiębiorstwa. 
+            Naszą misją jest uwolnienie Twojego zespołu od czsaochłonnych, powtarzalnych i zbędnych zadań. Dzięki n8n budujemy elastyczne, skalowalne i bezpieczne integracje, 
+            które pozwalają liderom skupić się na tym, co kluczowe: kreatywności i wzroście.
           </p>
           <div className="flex gap-8">
             <div>
@@ -32,12 +32,12 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
                 style={{ color: accentColor }}
                 className="text-5xl font-bold brand-font"
               >
-                3+
+                3000+
               </span>
               <p className="text-sm uppercase tracking-wider opacity-60 mt-2">
-                Zrealizowanych
+                Zaoszczędzonych godzin 
                 <br />
-                Projektów
+                rocznie u naszych klientów
               </p>
             </div>
             <div>
@@ -48,9 +48,9 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
                 100%
               </span>
               <p className="text-sm uppercase tracking-wider opacity-60 mt-2">
-                Zadowolonych
+                Skalowalności wdrożonych
                 <br />
-                Klientów
+                rozwiązań
               </p>
             </div>
           </div>
@@ -113,9 +113,10 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
               Chief Executive Officer
             </p>
             <p className="text-white/50 text-sm leading-relaxed">
-              Wizjoner z 10-letnim doświadczeniem w branży automatyzacji.
-              Wcześniej zarządzał procesami w korporacjach Fortune 500. W CAH
-              odpowiada za strategię i rozwój partnerstw.
+              Wizjoner automatyzacji, który widzi potencjał tam, gdzie inni widzą tylko nudne procesy. 
+              Marek to siła napędowa CAH – odpowiada za strategię, marketing i sprzedaż. 
+              Jego rolą jest zrozumienie Twojego biznesu i pokazanie Ci, jak technologia może realnie zwiększyć Twoje zyski. 
+              To on projektuje "duży obraz" zmian, które uwalniają Twój czas i skalują firmę.
             </p>
           </div>
         </div>
@@ -151,9 +152,9 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
               Chief Technology Officer
             </p>
             <p className="text-white/50 text-sm leading-relaxed">
-              Architekt systemów AI. Specjalizuje się w Pythonie i architekturze
-              chmurowej. Dba o to, by rozwiązania CAH były nie tylko skuteczne,
-              ale i bezpieczne.
+              Inżynierskie serce firmy. Pasjonat informatyki i elektroniki od najmłodszych lat, dla którego "nie da się" to tylko zaproszenie do znalezienia rozwiązania. 
+              Michał bierze wizje na warsztat i przekuwa je w niezawodny kod oraz workflowy n8n. 
+              To on dba o to, żeby pod maską wszystko grało, dane płynęły bez błędów, a AI faktycznie myślało za człowieka.
             </p>
           </div>
         </div>
