@@ -29,7 +29,7 @@ export const Navigation = () => {
           className="flex items-center hover:opacity-80 transition-opacity z-10"
         >
           <div className="h-8 md:h-10 w-auto flex items-center justify-center">
-            <div className="h-full w-20 md:w-24 bg-white/10  flex items-center justify-center rounded text-[8px] md:text-[10px] text-white/50 tracking-widest">
+            <div className="h-full w-20 md:w-24   flex items-center justify-center  text-[8px] md:text-[10px] text-white/50 tracking-widest">
             <Image 
               src="/logo1.svg" 
               alt="CAH Logo" 

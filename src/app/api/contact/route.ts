@@ -45,8 +45,8 @@ export async function POST(request: NextRequest) {
     const origin = request.headers.get('origin');
     const allowedOrigins = [
       process.env. NEXT_PUBLIC_SITE_URL,
-      'https://cah.pl',
-      'https://www.cah.pl',
+      'https://www.cracovautomationhub.pl/',
+      'https://cracovautomationhub.pl/',
       process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : null,
     ].filter(Boolean) as string[];
 

@@ -10,7 +10,7 @@ const brandFont = localFont({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cah.pl";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.cracovautomationhub.pl/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

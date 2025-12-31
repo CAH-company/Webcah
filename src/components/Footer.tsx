@@ -5,7 +5,7 @@ export const Footer = () => (
   <footer className="bg-cah-bg-dark py-12 px-6 border-t border-white/10 text-white/60 text-sm">
     <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="flex flex-col md:items-start items-center">
-        <div className="h-8 w-20 bg-white/10  flex items-center justify-center rounded text-[8px] text-white/50 tracking-widest mb-2">
+        <div className="h-8 w-20   flex items-center justify-center  text-[8px] text-white/50 tracking-widest mb-2">
         <Image 
           src="/logo1.svg" 
           alt="CAH Logo" 
