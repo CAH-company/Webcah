@@ -185,6 +185,16 @@ border-cah-accent
 - **LinkedIn**: /cracow-automations-hub
 - **Lokalizacja**: Kraków, Polska
 
+
+
+### Produkcja:
+1. Dobre repo na serwer
+2. Skonfiguruj plik .env
+3. Zmień plik nginx na build odpowieni
+4. Sprawdz czy webhook działa
+
+
 ## 📜 Licencja
 
 © 2025 Cracow Automations Hub. All rights reserved.
+
