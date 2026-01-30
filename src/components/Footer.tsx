@@ -14,7 +14,7 @@ export const Footer = () => (
           className="h-8 w-auto mb-2"
         />
         </div>
-        <span>Cracow Automations Hub</span>
+        <span>Poland Automations Hub</span>
       </div>
       <div className="flex gap-8">
         <Link

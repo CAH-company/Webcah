@@ -33,9 +33,9 @@ export const HomeSection = () => (
 
     <div className="absolute bottom-10 left-0 w-full overflow-hidden whitespace-nowrap border-y border-white/5 py-4 z-0 pointer-events-none opacity-20">
       <div className="inline-block animate-[marquee_40s_linear_infinite] brand-font text-xl md:text-4xl text-transparent stroke-text font-bold">
-        AUTOMATION • ARTIFICIAL INTELLIGENCE • DATA SCIENCE • CRACOW AUTOMATIONS
+        AUTOMATION • ARTIFICIAL INTELLIGENCE • DATA SCIENCE • POLAND AUTOMATIONS
         HUB • INNOVATION • SPEED • AUTOMATION • ARTIFICIAL INTELLIGENCE • DATA
-        SCIENCE • CRACOW AUTOMATIONS HUB • INNOVATION • SPEED •
+        SCIENCE • POLAND AUTOMATIONS HUB • INNOVATION • SPEED •
       </div>
     </div>
   </header>

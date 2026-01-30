@@ -31,7 +31,7 @@ export const Navigation = () => {
           <div className="h-8 md:h-10 w-auto flex items-center justify-center">
             <div className="h-full w-20 md:w-24 flex items-center justify-center text-[8px] md:text-[10px] text-white/50 tracking-widest">
               <Image 
-                src="/logo1.svg" 
+                src="/logo2.svg" 
                 alt="CAH Logo" 
                 width={96} 
                 height={40} 

@@ -22,7 +22,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             nie odwrotnie
           </h2>
           <p className="text-xl text-white/70 mb-8 font-light">
-            W Cracow Automations Hub wierzymy, że czas to najcenniejszy zasób nowoczesnego przedsiębiorstwa. 
+            W Poland Automations Hub wierzymy, że czas to najcenniejszy zasób nowoczesnego przedsiębiorstwa. 
             Naszą misją jest uwolnienie Twojego zespołu od czsaochłonnych, powtarzalnych i zbędnych zadań. Dzięki n8n budujemy elastyczne, skalowalne i bezpieczne integracje, 
             które pozwalają liderom skupić się na tym, co kluczowe: kreatywności i wzroście.
           </p>
@@ -61,7 +61,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
           <div className="relative z-10 text-center p-8">
           <div className="w-48 h-48 mx-auto border-2 border-white/10 flex items-center justify-center rounded-lg bg-black/50 mb-4 p-8">
               <Image 
-                src="/logo1.svg" 
+                src="/logo2.svg" 
                 alt="CAH Logo" 
                 width={192} 
                 height={192} 
@@ -114,7 +114,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             </p>
             <p className="text-white/50 text-sm leading-relaxed">
               Wizjoner automatyzacji, który widzi potencjał tam, gdzie inni widzą tylko nudne procesy. 
-              Marek to siła napędowa CAH – odpowiada za strategię, marketing i sprzedaż. 
+              Marek to siła napędowa PAH – odpowiada za strategię, marketing i sprzedaż. 
               Jego rolą jest zrozumienie Twojego biznesu i pokazanie Ci, jak technologia może realnie zwiększyć Twoje zyski. 
               To on projektuje "duży obraz" zmian, które uwalniają Twój czas i skalują firmę.
             </p>
