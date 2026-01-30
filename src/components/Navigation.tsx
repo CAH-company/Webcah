@@ -29,27 +29,28 @@ export const Navigation = () => {
           className="flex items-center hover:opacity-80 transition-opacity z-10"
         >
           <div className="h-8 md:h-10 w-auto flex items-center justify-center">
-            <div className="h-full w-20 md:w-24   flex items-center justify-center  text-[8px] md:text-[10px] text-white/50 tracking-widest">
-            <Image 
-              src="/logo1.svg" 
-              alt="CAH Logo" 
-              width={96} 
-              height={40} 
-              className="h-full w-auto"
-            />
+            <div className="h-full w-20 md:w-24 flex items-center justify-center text-[8px] md:text-[10px] text-white/50 tracking-widest">
+              <Image 
+                src="/logo1.svg" 
+                alt="CAH Logo" 
+                width={96} 
+                height={40} 
+                className="h-full w-auto"
+              />
             </div>
           </div>
         </Link>
 
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-8 text-xs md:text-sm tracking-widest uppercase font-medium brand-font">
+        {/* Zmienione:  usunięto "hidden md:flex" - teraz widoczne na wszystkich rozmiarach */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-4 md:gap-8 text-xs md:text-sm tracking-widest uppercase font-medium brand-font">
           <Link
             href="/"
             className={`hover:text-cah-accent transition-colors ${
-              pathname === "/" ?  "text-cah-accent" : ""
+              pathname === "/" ? "text-cah-accent" : ""
             }`}
           >
-  Home
-</Link>
+            Home
+          </Link>
           <Link
             href="/uslugi"
             className={`hover:text-cah-accent transition-colors ${
@@ -76,13 +77,8 @@ export const Navigation = () => {
           </Link>
         </div>
 
+        {/* Usunięto stary kod mobile menu */}
         <div className="hidden md:block w-20" />
-
-        <div className="md:hidden flex gap-4 text-xs tracking-widest uppercase font-medium brand-font">
-          <Link href="/kontakt" className="text-cah-accent">
-            Menu
-          </Link>
-        </div>
       </div>
     </nav>
   );
