@@ -141,7 +141,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
               <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Mail size={20} />
               </div>
-              <span className="group-hover:text-cah-accent transition-colors">hello@cah.pl</span>
+              <span className="group-hover:text-cah-accent transition-colors">cracowautomationhub@gmail.com</span>
             </a>
             <a 
               href="https://www.linkedin.com/company/cracow-automations-hub"
