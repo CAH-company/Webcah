@@ -10,13 +10,13 @@ const brandFont = localFont({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.cracovautomationhub.pl/";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.polandautomationhub.pl/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Cracow Automations Hub - Automatyzacja procesów biznesowych",
-    template: "%s | Cracow Automations Hub",
+    default: "Poland Automations Hub - Automatyzacja procesów biznesowych",
+    template: "%s | Poland Automations Hub",
   },
   description:
     "Automatyzacja procesów biznesowych, AI, integracje systemowe i konsulting technologiczny. Zyskaj czas, zredukuj koszty, wyprzedź konkurencję z CAH.",
@@ -27,14 +27,15 @@ export const metadata: Metadata = {
     "AI",
     "integracje systemowe",
     "consulting technologiczny",
-    "Kraków",
-    "CAH",
+    "Poalnd",
+    "PAH",
+    "PAHub",
     "wdrożenia CRM",
     "Business Process Automation",
   ],
-  authors: [{ name: "Cracow Automations Hub" }],
-  creator: "Cracow Automations Hub",
-  publisher: "Cracow Automations Hub",
+  authors: [{ name: "Poland Automations Hub" }],
+  creator: "Poland Automations Hub",
+  publisher: "Poland Automations Hub",
   formatDetection: {
     email: false,
     address: false,
@@ -44,8 +45,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pl_PL",
     url: siteUrl,
-    siteName: "Cracow Automations Hub",
-    title: "Cracow Automations Hub - Automatyzacja procesów biznesowych",
+    siteName: "Poland Automations Hub",
+    title: "Poland Automations Hub - Automatyzacja procesów biznesowych",
     description:
       "Automatyzacja procesów biznesowych, AI, integracje systemowe i konsulting technologiczny. Zyskaj czas, zredukuj koszty, wyprzedź konkurencję z CAH.",
     images: [
@@ -53,13 +54,13 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Cracow Automations Hub",
+        alt: "Poland Automations Hub",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cracow Automations Hub - Automatyzacja procesów biznesowych",
+    title: "Poland Automations Hub - Automatyzacja procesów biznesowych",
     description:
       "Automatyzacja procesów biznesowych, AI, integracje systemowe i konsulting technologiczny.",
     images: [`${siteUrl}/og-image.jpg`],
@@ -88,8 +89,8 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Cracow Automations Hub",
-    alternateName: "CAH",
+    name: "Poland Automations Hub",
+    alternateName: "PAH",
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     description:
@@ -101,13 +102,13 @@ export default function RootLayout({
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@cah.pl",
+      email: "kontakt@pahub.pl",
       contactType: "Customer Service",
       areaServed: "PL",
       availableLanguage: ["Polish", "English"],
     },
     sameAs: [
-      "https://www.linkedin.com/company/cracow-automations-hub",
+      "https://www.linkedin.com/company/poland-automation-hub/",
     ],
   };
 

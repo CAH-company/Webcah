@@ -61,7 +61,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
           <div className="relative z-10 text-center p-8">
           <div className="w-48 h-48 mx-auto border-2 border-white/10 flex items-center justify-center rounded-lg bg-black/50 mb-4 p-8">
               <Image 
-                src="/logo2.svg" 
+                src="/Pah 2.svg" 
                 alt="CAH Logo" 
                 width={192} 
                 height={192} 
@@ -69,7 +69,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
               />
             </div>
             <span className="tracking-[0.5em] text-sm uppercase opacity-70 brand-font">
-              Cracow HQ
+              Poland HQ
             </span>
           </div>
         </div>

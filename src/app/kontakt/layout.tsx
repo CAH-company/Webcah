@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Kontakt - Poland Automations Hub",
     description:
       "Skontaktuj się z CAH. Opisz swój proces lub problem. Oddzwonimy w ciągu 24h z wstępną analizą i wyceną.",
-    url: "https://www.cracovautomationhub.pl/kontakt",
+    url: "https://polandautomationhub.pl/kontakt",
     siteName: "Poland Automations Hub",
     locale: "pl_PL",
     type: "website",

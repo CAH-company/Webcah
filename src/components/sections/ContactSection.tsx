@@ -135,16 +135,16 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
 
           <div className="space-y-6">
             <a 
-              href="mailto:hello@cah.pl"
+              href="mailto:kontakt@pahub.pl"
               className="flex items-center gap-4 text-xl group cursor-pointer"
             >
               <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Mail size={20} />
               </div>
-              <span className="group-hover:text-cah-accent transition-colors">cracowautomationhub@gmail.com</span>
+              <span className="group-hover:text-cah-accent transition-colors">kontakt@pahub.pl</span>
             </a>
             <a 
-              href="https://www.linkedin.com/company/cracow-automations-hub"
+              href="https://www.linkedin.com/company/poland-automation-hub/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 text-xl group cursor-pointer"
@@ -152,10 +152,10 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
               <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Linkedin size={20} />
               </div>
-              <span className="group-hover:text-cah-accent transition-colors">/cracow-automations-hub</span>
+              <span className="group-hover:text-cah-accent transition-colors">Poland Automations Hub</span>
             </a>
             <a 
-              href="https://www.facebook.com/cracowautomationshub"
+              href="https://www.facebook.com/polandautomationhub"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 text-xl group cursor-pointer"
@@ -163,10 +163,10 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
               <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Facebook size={20} />
               </div>
-              <span className="group-hover:text-cah-accent transition-colors">/cracowautomationshub</span>
+              <span className="group-hover:text-cah-accent transition-colors">Poland Automations Hub</span>
             </a>
             <a 
-              href="https://www.instagram.com/cracowautomationshub"
+              href="https://www.instagram.com/poland.automation.hub?igsh=ZTVwcnV1dTNjNGlp"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 text-xl group cursor-pointer"
@@ -174,7 +174,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
               <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-cah-accent group-hover:bg-cah-accent group-hover:text-black transition-all">
                 <Instagram size={20} />
               </div>
-              <span className="group-hover: text-cah-accent transition-colors">@cracowautomationshub</span>
+              <span className="group-hover: text-cah-accent transition-colors">@PolandAutomationsHub</span>
             </a>
           </div>
         </div>

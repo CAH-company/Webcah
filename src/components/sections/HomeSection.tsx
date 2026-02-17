@@ -18,7 +18,7 @@ export const HomeSection = () => (
         </h1>
         <div className="flex flex-col md:flex-row gap-8 items-start md:items-center mt-12 mb-12">
           <Link
-            href="/kontakt"
+            href="https://calendly.com/lazarski-business/new-meeting"
             className="group flex items-center gap-4 bg-cah-accent text-black px-8 py-4 text-lg font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(78,213,205,0.3)] brand-font"
           >
             UMÓW KONSULTACJĘ

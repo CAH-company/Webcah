@@ -36,7 +36,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
               <h3 className="text-3xl font-bold mb-4 brand-font">
                 Architektura Procesów Biznesowych
               </h3>
-              <p className="text-white/60 max-w-md">
+              <p className="text-white/60 max-w-md text-justify">
                 Projektujemy i wdrażamy ekosystemy automatyzacji. 
                 Integrujemy rozproszone środowiska IT, eliminując manualną obsługę danych i optymalizując przepływy pracy wewnątrz organizacji.
                 Zapewniamy pełną spójność danych między systemami bez ingerencji użytkownika.
@@ -64,7 +64,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
               </h3>
               <Zap className="opacity-50" size={32} />
             </div>
-            <p className="opacity-80 font-medium leading-relaxed mb-6">
+            <p className="opacity-80 font-medium leading-relaxed mb-6 text-justify" >
               Specjalizujemy się w pełnym wdrożeniu i konfiguracji systemów CRM oraz ich integracji z dotychczasową infrastrukturą IT. 
               Projektujemy cyfrowe centra obiegu informacji w oparciu o Google Drive, Slack i inne narzędzia do zarządzania zadaniami. 
               Zapewniamy płynną wymianę dokumentacji oraz prowadzimy kompleksowe szkolenia pracowników z obsługi wdrożonych rozwiązań.
@@ -89,7 +89,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
             <h3 className="text-2xl font-bold mb-2 brand-font">
               Systemy AI i Analityka Operacyjna
             </h3>
-            <p className="text-white/60 text-sm">
+            <p className="text-white/60 text-sm text-justify">
              Wdrażamy zaawansowane systemy AI do automatycznego podsumowywania spotkań biznesowych oraz głębokiej analityki kampanii reklamowych i działań cold mailingowych. 
              Budujemy narzędzia analizujące dane bezpośrednio z CRM, które dostarczają precyzyjnych informacji o efektywności sprzedaży i rentowności procesów. 
              Dzięki integracji AI z danymi operacyjnymi, zamieniamy chaotyczne informacje w czytelne dashboardy wspierające trafne decyzje biznesowe.
@@ -103,7 +103,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
             <h3 className="text-2xl font-bold mb-2 brand-font">
               Consulting Technologiczny
             </h3>
-            <p className="text-white/60 text-sm">
+            <p className="text-white/60 text-sm text-justify">
               Wdrażamy systemy, które automatycznie generują i przesyłają oferty do klientów, wyjaśniając im proces ich powstawania i budując ekspercki wizerunek Twojej firmy.
               Wykorzystujemy AI do inteligentnego odpowiadania na wiadomości oraz projektujemy bezobsługowe sekwencje follow-up, które dbają o ciągłość kontaktu. 
               Rozwiązania te zapewniają pełną szczelność lejka sprzedażowego w CRM, eliminując błędy i znacząco przyspieszając finalizację transakcji.
@@ -116,7 +116,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
             <h3 className="text-2xl font-bold mb-2 flex items-center gap-3 brand-font">
               <Database style={{ color: accentColor }} size={24} /> Doradztwo i Audyt Technologiczny
             </h3>
-            <p className="text-white/60 text-sm">
+            <p className="text-white/60 text-sm text-justify">
               Przeprowadzamy kompleksowy audyt procesów biznesowych, precyzyjnie identyfikując „wąskie gardła” operacyjne oraz obszary o najwyższym potencjale zwrotu z inwestycji. 
               Na tej podstawie dostarczamy mapę drogową wdrożeń z priorytetami dopasowanymi do budżetu i skali Twojego przedsiębiorstwa.
               Doradzamy w doborze optymalnych narzędzi oraz prowadzimy warsztaty dla zespołów, przygotowując kadrę do efektywnej pracy w zautomatyzowanym środowisku wspieranym przez AI.
@@ -133,7 +133,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
             size={48}
           />
           <h3 className="text-xl font-bold mb-1 brand-font">Automatyzacje Operacyjne</h3>
-          <p className="text-white/40 text-xs">Projektujemy dedykowane formularze i inteligentne arkusze, które automatyzują obieg informacji i znacząco usprawniają codzienne operacje w Twojej firmie.</p>
+          <p className="text-white/40 text-xs text-justify">Projektujemy dedykowane formularze i inteligentne arkusze, które automatyzują obieg informacji i znacząco usprawniają codzienne operacje w Twojej firmie.</p>
         </div>
       </div>
     </div>

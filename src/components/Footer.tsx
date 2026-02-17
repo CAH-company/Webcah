@@ -30,7 +30,7 @@ export const Footer = () => (
           Kontakt
         </Link>
       </div>
-      <div className="opacity-40">© 2025 CAH.</div>
+      <div className="opacity-40">© 2025 PAH.</div>
     </div>
   </footer>
 );
