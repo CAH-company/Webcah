@@ -79,7 +79,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
         className="text-3xl font-bold mb-12 border-l-4 pl-6 brand-font"
         style={{ borderColor: accentColor }}
       >
-        Zespoł CAH
+        Zespoł Poland Automation Hub
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="bg-cah-bg-card border border-white/10 rounded-3xl overflow-hidden group hover:border-cah-accent transition-colors">
