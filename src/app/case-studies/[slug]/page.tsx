@@ -66,9 +66,9 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
                   Rezultaty
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {cs.results.map((result, i) => (
+                  {cs.results.map((result) => (
                     <div
-                      key={i}
+                      key={result}
                       className="bg-cah-bg-card border border-white/10 rounded-2xl p-6"
                     >
                       <CheckCircle
@@ -95,9 +95,9 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
                     Zrealizowane usługi
                   </h3>
                   <ul className="space-y-2">
-                    {cs.services.map((service, i) => (
+                    {cs.services.map((service) => (
                       <li
-                        key={i}
+                        key={service}
                         className="flex items-start gap-2 text-white/60 text-sm"
                       >
                         <span

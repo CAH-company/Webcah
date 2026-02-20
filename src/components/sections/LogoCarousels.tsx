@@ -34,7 +34,7 @@ function LogoStrip({ logos, direction = "left" }: { logos: LogoItem[]; direction
     <div className="overflow-hidden whitespace-nowrap py-6">
       <div className={`inline-flex gap-16 items-center ${animationClass}`}>
         {doubled.map((logo, i) => (
-          <div key={i} className="flex-shrink-0 opacity-40 hover:opacity-80 transition-opacity duration-300">
+          <div key={`${logo.src}-${i}`} className="flex-shrink-0 opacity-40 hover:opacity-80 transition-opacity duration-300">
             <Image
               src={logo.src}
               alt={logo.alt}
