@@ -21,9 +21,6 @@ const toolLogos: LogoItem[] = [
 const partnerLogos: LogoItem[] = [
   { src: "/logos/partners/partner1.svg", alt: "Partner 1" },
   { src: "/logos/partners/partner2.svg", alt: "Partner 2" },
-  { src: "/logos/partners/partner3.svg", alt: "Partner 3" },
-  { src: "/logos/partners/partner4.svg", alt: "Partner 4" },
-  { src: "/logos/partners/partner5.svg", alt: "Partner 5" },
 ];
 
 function LogoStrip({ logos, direction = "left" }: { logos: LogoItem[]; direction?: "left" | "right" }) {
@@ -56,7 +53,19 @@ export const LogoCarousels = () => (
         <p className="text-center text-xs uppercase tracking-[0.3em] text-white/30 mb-8 brand-font">
           Firmy, które nam zaufały
         </p>
-        <LogoStrip logos={partnerLogos} direction="left" />
+        <div className="flex justify-center items-center gap-16 py-6">
+          {partnerLogos.map((logo) => (
+            <div key={logo.src} className="opacity-40 hover:opacity-80 transition-opacity duration-300">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={120}
+                height={40}
+                className="h-8 md:h-10 w-auto"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="border-t border-white/5 pt-12">
