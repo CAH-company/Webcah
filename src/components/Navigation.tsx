@@ -80,6 +80,14 @@ export const Navigation = () => {
             Usługi
           </Link>
           <Link
+            href="/case-studies"
+            className={`hover:text-cah-accent transition-colors ${
+              pathname.startsWith("/case-studies") ? "text-cah-accent" : ""
+            }`}
+          >
+            Case Studies
+          </Link>
+          <Link
             href="/o-nas"
             className={`hover:text-cah-accent transition-colors ${
               pathname === "/o-nas" ? "text-cah-accent" : ""
@@ -145,6 +153,14 @@ export const Navigation = () => {
               }`}
             >
               Usługi
+            </Link>
+            <Link
+              href="/case-studies"
+              className={`hover:text-cah-accent transition-colors ${
+                pathname.startsWith("/case-studies") ? "text-cah-accent" : ""
+              }`}
+            >
+              Case Studies
             </Link>
             <Link
               href="/o-nas"
