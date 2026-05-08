@@ -5,6 +5,18 @@
   --foreground: #ededed;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#home,
+#uslugi,
+#o-nas,
+#realizacje,
+#kontakt {
+  scroll-margin-top: 80px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

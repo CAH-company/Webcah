@@ -14,7 +14,7 @@ type ServicesSectionProps = {
 };
 
 export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
-  <section className="pt-40 pb-24 px-6 bg-cah-bg min-h-screen animate-fade-in">
+  <section className="pt-20 pb-16 md:pt-40 md:pb-24 px-6 bg-cah-bg animate-fade-in">
     <div className="container mx-auto">
       <div className="mb-16 border-b border-white/10 pb-8">
         <h2 className="text-5xl md:text-7xl font-bold mb-6 brand-font">
@@ -26,7 +26,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[320px]">
         <div className="md:col-span-2 bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-100 transition-opacity duration-500 text-cah-accent">
             <Cpu size={140} />

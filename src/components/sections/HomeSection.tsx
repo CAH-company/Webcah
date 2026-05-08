@@ -11,7 +11,7 @@ export const HomeSection = () => (
         <p className="text-cah-accent tracking-[0.3em] uppercase mb-6 animate-fade-in-up text-sm md:text-base font-bold brand-font">
           EKOSYSTEMY INTELIGENTNYCH AUTOMATYZACJI
         </p>
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[1.1] tracking-tight mb-8 brand-font">
+        <h1 className="text-[1.5rem] sm:text-5xl md:text-7xl lg:text-9xl font-bold leading-[1.1] tracking-tight mb-8 brand-font">
           Projektujemy <br />
           <span className="text-outline">cyfrową wydajność </span> <br />
            Twojej firmy

@@ -114,7 +114,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
   };
 
   return (
-    <section className="pt-40 pb-24 px-6 bg-cah-bg min-h-screen flex items-center animate-fade-in">
+    <section className="pt-20 pb-16 md:pt-40 md:pb-24 px-6 bg-cah-bg flex items-center animate-fade-in">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <p
