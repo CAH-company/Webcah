@@ -9,23 +9,23 @@ export const HomeSection = () => (
     <div className="container mx-auto relative z-10 flex-grow flex flex-col justify-center">
       <div className="max-w-5xl">
         <p className="text-cah-accent tracking-[0.3em] uppercase mb-6 animate-fade-in-up text-sm md:text-base font-bold brand-font">
-          EKOSYSTEMY INTELIGENTNYCH AUTOMATYZACJI
+          CONSULTING IT DLA POLSKICH MŚP
         </p>
         <h1 className="text-[1.5rem] sm:text-5xl md:text-7xl lg:text-9xl font-bold leading-[1.1] tracking-tight mb-8 brand-font">
-          Projektujemy <br />
-          <span className="text-outline">cyfrową wydajność </span> <br />
-           Twojej firmy
+          Płacisz za narzędzia,<br />
+          <span className="text-outline">z których korzystasz</span><br />
+          w 20%?
         </h1>
         <div className="flex flex-col md:flex-row gap-8 items-start md:items-center mt-12 mb-12">
           <Link
             href="https://calendly.com/lazarski-business/new-meeting"
             className="group flex items-center gap-4 bg-cah-accent text-black px-8 py-4 text-lg font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(78,213,205,0.3)] brand-font"
           >
-            UMÓW KONSULTACJĘ
+            BEZPŁATNA KONSULTACJA 30 MIN
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Link>
           <p className="max-w-xs text-white/60 text-sm leading-relaxed border-l border-white/20 pl-4">
-            Eliminujemy powtarzalne procesy, wdrażając zaawansowane przepływy pracy oparte na n8n i AI. Zmieniamy operacyjny chaos w precyzyjny mechanizm, który pracuje na Twój zysk 24/7.
+            Wchodzimy do firm z sektora MŚP, mapujemy procesy i narzędzia, liczymy ile tracisz — i mówimy wprost, co z tym zrobić. Z konkretnymi liczbami.
           </p>
         </div>
       </div>

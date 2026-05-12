@@ -1,13 +1,4 @@
-import {
-  ArrowRight,
-  Box,
-  CheckCircle,
-  Code,
-  Cpu,
-  Database,
-  TrendingUp,
-  Zap,
-} from "lucide-react";
+import { BarChart2, Shield, Zap } from "lucide-react";
 
 type ServicesSectionProps = {
   accentColor: string;
@@ -21,122 +12,100 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
           Nasze <span style={{ color: accentColor }}>Usługi</span>
         </h2>
         <p className="text-xl text-white/60 max-w-2xl">
-          Kompleksowe podejście do technologii. Od audytu, przez wdrożenie, aż po
-          utrzymanie systemów.
+          Robimy trzy rzeczy. Każda może być osobną usługą lub częścią większej współpracy.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[320px]">
-        <div className="md:col-span-2 bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-100 transition-opacity duration-500 text-cah-accent">
-            <Cpu size={140} />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        {/* A — Audyt */}
+        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card flex flex-col group relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-100 transition-opacity duration-500" style={{ color: accentColor }}>
+            <BarChart2 size={120} />
           </div>
-          <div className="relative z-10 h-full flex flex-col justify-between">
-            <div>
-              <h3 className="text-3xl font-bold mb-4 brand-font">
-                Architektura Procesów Biznesowych
-              </h3>
-              <p className="text-white/60 max-w-md text-justify">
-                Projektujemy i wdrażamy ekosystemy automatyzacji. 
-                Integrujemy rozproszone środowiska IT, eliminując manualną obsługę danych i optymalizując przepływy pracy wewnątrz organizacji.
-                Zapewniamy pełną spójność danych między systemami bez ingerencji użytkownika.
-              </p>
-            </div>
-            <div className="flex gap-2 mt-4">
-              <span className="text-xs border border-white/20 rounded-full px-3 py-1">
-                n8n
-              </span>
-              <span className="text-xs border border-white/20 rounded-full px-3 py-1">
-                Google AppScripts
-              </span>
+          <div className="relative z-10 flex flex-col h-full">
+            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-6 brand-font" style={{ color: accentColor }}>
+              USŁUGA A
+            </p>
+            <h3 className="text-2xl font-bold mb-4 brand-font leading-tight">
+              Audyt Technologiczny<br />i Mapa Drogowa
+            </h3>
+            <p className="text-white/55 text-sm leading-relaxed mb-6 flex-1">
+              Wchodzimy do firmy i prześwietlamy ją od środka. Wywiady z zespołem, mapa
+              procesów, audyt każdego narzędzia i analiza gotowości na AI. Dostajesz konkretny
+              raport — ile tracisz i co zmienić w jakiej kolejności. Nie 200 stron, których nikt
+              nie przeczyta.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Audyt narzędzi", "Mapa procesów", "AI Readiness", "Quick Wins"].map((tag) => (
+                <span key={tag} className="text-xs border border-white/20 rounded-full px-3 py-1 text-white/50">
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
 
+        {/* B — Quick Wins */}
         <div
+          className="p-8 rounded-3xl hover-card flex flex-col relative overflow-hidden"
           style={{ backgroundColor: accentColor }}
-          className="md:col-span-1 md:row-span-2 text-black p-8 rounded-3xl hover-card flex flex-col justify-between group"
         >
-          <div>
-            <div className="w-full flex justify-between items-start mb-8">
-              <h3 className="text-3xl font-bold brand-font">
-                Systemy CRM i Ekosystemy IT
-              </h3>
-              <Zap className="opacity-50" size={32} />
+          <div className="absolute top-0 right-0 p-6 opacity-10">
+            <Zap size={120} className="text-black" />
+          </div>
+          <div className="relative z-10 flex flex-col h-full">
+            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-6 brand-font text-black/50">
+              USŁUGA B
+            </p>
+            <h3 className="text-2xl font-bold mb-4 brand-font text-black leading-tight">
+              Wdrożenie Quick Wins<br />+ Szkolenie z AI
+            </h3>
+            <p className="text-black/70 text-sm leading-relaxed mb-6 flex-1">
+              Nie tylko mówimy co zmienić — robimy to. Konsolidujemy narzędzia, ustawiamy
+              automatyzacje, budujemy proste rozwiązania wewnętrzne. Plus szkolimy zespół jak
+              używać AI w codziennej pracy — konkretnie, pod Waszą branżę. Nie "AI for
+              beginners".
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Automatyzacje", "Migracje", "Szkolenie AI", "Quick Wins"].map((tag) => (
+                <span key={tag} className="text-xs border border-black/20 rounded-full px-3 py-1 text-black/60">
+                  {tag}
+                </span>
+              ))}
             </div>
-            <p className="opacity-80 font-medium leading-relaxed mb-6 text-justify" >
-              Specjalizujemy się w pełnym wdrożeniu i konfiguracji systemów CRM oraz ich integracji z dotychczasową infrastrukturą IT. 
-              Projektujemy cyfrowe centra obiegu informacji w oparciu o Google Drive, Slack i inne narzędzia do zarządzania zadaniami. 
-              Zapewniamy płynną wymianę dokumentacji oraz prowadzimy kompleksowe szkolenia pracowników z obsługi wdrożonych rozwiązań.
-            </p>
           </div>
-          <ul className="space-y-4 font-mono text-sm opacity-80 border-t border-black/20 pt-6">
-            <li className="flex items-center gap-2 font-bold">
-              <CheckCircle size={16} /> Google Drive
-            </li>
-            <li className="flex items-center gap-2 font-bold">
-              <CheckCircle size={16} /> Pipedrive
-            </li>
-            <li className="flex items-center gap-2 font-bold">
-              <CheckCircle size={16} /> i wiele innych
-            </li>
-          </ul>
         </div>
 
-        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card group flex flex-col justify-between">
-          <Box style={{ color: accentColor }} size={40} className="mb-4" />
-          <div>
-            <h3 className="text-2xl font-bold mb-2 brand-font">
-              Systemy AI i Analityka Operacyjna
+        {/* C — Partner */}
+        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card flex flex-col group relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-100 transition-opacity duration-500" style={{ color: accentColor }}>
+            <Shield size={120} />
+          </div>
+          <div className="relative z-10 flex flex-col h-full">
+            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-6 brand-font" style={{ color: accentColor }}>
+              USŁUGA C
+            </p>
+            <h3 className="text-2xl font-bold mb-4 brand-font leading-tight">
+              Partner Technologiczny<br />
+              <span className="text-white/40 font-normal text-xl">(Fractional CTO)</span>
             </h3>
-            <p className="text-white/60 text-sm text-justify">
-             Wdrażamy zaawansowane systemy AI do automatycznego podsumowywania spotkań biznesowych oraz głębokiej analityki kampanii reklamowych i działań cold mailingowych. 
-             Budujemy narzędzia analizujące dane bezpośrednio z CRM, które dostarczają precyzyjnych informacji o efektywności sprzedaży i rentowności procesów. 
-             Dzięki integracji AI z danymi operacyjnymi, zamieniamy chaotyczne informacje w czytelne dashboardy wspierające trafne decyzje biznesowe.
+            <p className="text-white/55 text-sm leading-relaxed mb-6 flex-1">
+              Twój dział IT, bez zatrudniania działu IT. Stały nadzór nad kosztami,
+              wdrożenia z roadmapy, szkolenia i wsparcie na Slacku. Co miesiąc raport
+              co zrobiliśmy i co planujemy — żebyś widział wartość w liczbach.
             </p>
+            <div className="flex flex-wrap gap-2">
+              {["Stały nadzór", "Optymalizacja kosztów", "Slack/mail", "Raporty"].map((tag) => (
+                <span key={tag} className="text-xs border border-white/20 rounded-full px-3 py-1 text-white/50">
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card group flex flex-col justify-between">
-          <TrendingUp style={{ color: accentColor }} size={40} className="mb-4" />
-          <div>
-            <h3 className="text-2xl font-bold mb-2 brand-font">
-              Consulting Technologiczny
-            </h3>
-            <p className="text-white/60 text-sm text-justify">
-              Wdrażamy systemy, które automatycznie generują i przesyłają oferty do klientów, wyjaśniając im proces ich powstawania i budując ekspercki wizerunek Twojej firmy.
-              Wykorzystujemy AI do inteligentnego odpowiadania na wiadomości oraz projektujemy bezobsługowe sekwencje follow-up, które dbają o ciągłość kontaktu. 
-              Rozwiązania te zapewniają pełną szczelność lejka sprzedażowego w CRM, eliminując błędy i znacząco przyspieszając finalizację transakcji.
-            </p>
-          </div>
-        </div>
-
-        <div className="md:col-span-2 bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card flex items-center justify-between group">
-          <div className="max-w-lg">
-            <h3 className="text-2xl font-bold mb-2 flex items-center gap-3 brand-font">
-              <Database style={{ color: accentColor }} size={24} /> Doradztwo i Audyt Technologiczny
-            </h3>
-            <p className="text-white/60 text-sm text-justify">
-              Przeprowadzamy kompleksowy audyt procesów biznesowych, precyzyjnie identyfikując „wąskie gardła” operacyjne oraz obszary o najwyższym potencjale zwrotu z inwestycji. 
-              Na tej podstawie dostarczamy mapę drogową wdrożeń z priorytetami dopasowanymi do budżetu i skali Twojego przedsiębiorstwa.
-              Doradzamy w doborze optymalnych narzędzi oraz prowadzimy warsztaty dla zespołów, przygotowując kadrę do efektywnej pracy w zautomatyzowanym środowisku wspieranym przez AI.
-            </p>
-          </div>
-          <div className="hidden md:block bg-white/5 p-4 rounded-full">
-            <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </div>
-        </div>
-
-        <div className="bg-[#151515] border border-white/5 p-8 rounded-3xl hover-card flex flex-col justify-center items-center text-center group">
-          <Code
-            className="mb-4 opacity-50 group-hover:text-cah-accent group-hover:opacity-100 transition-all"
-            size={48}
-          />
-          <h3 className="text-xl font-bold mb-1 brand-font">Automatyzacje Operacyjne</h3>
-          <p className="text-white/40 text-xs text-justify">Projektujemy dedykowane formularze i inteligentne arkusze, które automatyzują obieg informacji i znacząco usprawniają codzienne operacje w Twojej firmie.</p>
-        </div>
       </div>
     </div>
   </section>
 );
-

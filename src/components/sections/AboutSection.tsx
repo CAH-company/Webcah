@@ -39,45 +39,29 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
               letterSpacing: "-0.025em",
             }}
           >
-            Technologia{" "}
-            w służbie{" "}
-            <span style={{ color: accentColor }}>strategii</span>
+            Biznes{" "}
+            przed{" "}
+            <span style={{ color: accentColor }}>technologią</span>
           </h2>
           <p className="text-white/55 text-lg leading-[1.85] mb-14 max-w-lg">
-            W Poland Automations Hub wierzymy, że czas to najcenniejszy zasób
-            nowoczesnego przedsiębiorstwa. Naszą misją jest uwolnienie Twojego
-            zespołu od czasochłonnych, powtarzalnych zadań. Dzięki n8n budujemy
-            elastyczne, skalowalne i bezpieczne integracje, które pozwalają
-            liderom skupić się na tym, co kluczowe: kreatywności i wzroście.
+            Nie zaczynamy od pytania „jakie macie systemy". Zaczynamy od
+            „jak wygląda Wasz dzień i co Was frustruje". Najpierw rozumiemy
+            problem biznesowy — dopiero potem dobieramy technologię.
+            Nie mamy umów partnerskich z żadnym dostawcą — rekomendujemy
+            to, co jest najlepsze dla klienta. Nawet jeśli to darmowe rozwiązanie.
           </p>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-6">
-            <div
-              className="border-l-2 pl-6 py-2"
-              style={{ borderColor: accentColor }}
-            >
-              <span
-                className="text-5xl font-bold brand-font leading-none block mb-3"
-                style={{ color: accentColor }}
-              >
-                3000+
-              </span>
-              <p className="text-xs uppercase tracking-wider text-white/40 leading-relaxed">
-                Zaoszczędzonych godzin<br />rocznie u naszych klientów
-              </p>
-            </div>
-            <div
-              className="border-l-2 pl-6 py-2"
-              style={{ borderColor: "rgba(255,255,255,0.08)" }}
-            >
-              <span className="text-5xl font-bold brand-font text-white leading-none block mb-3">
-                100%
-              </span>
-              <p className="text-xs uppercase tracking-wider text-white/40 leading-relaxed">
-                Skalowalności wdrożonych<br />rozwiązań
-              </p>
-            </div>
+          <div className="flex flex-col gap-4">
+            {[
+              "Nie sprzedajemy narzędzi — rekomendujemy to, co jest najlepsze dla klienta.",
+              "Każdy projekt prowadzimy bezpośrednio — bez warstw pośrednich.",
+              "Rozumiemy realia polskich MŚP, bo sami nimi jesteśmy.",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
+                <p className="text-white/50 text-sm leading-relaxed">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -217,11 +201,10 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
                 Chief Executive Officer
               </p>
               <p className="text-white/45 text-sm leading-relaxed">
-                Wizjoner automatyzacji, który widzi potencjał tam, gdzie inni
-                widzą tylko nudne procesy. Marek to siła napędowa PAH —
-                odpowiada za strategię, marketing i sprzedaż. Jego rolą jest
-                zrozumienie Twojego biznesu i pokazanie Ci, jak technologia
-                może realnie zwiększyć Twoje zyski.
+                Rozumie Twój biznes, procesy sprzedażowe i strategię.
+                Mówi językiem właściciela firmy, nie językiem kodu.
+                Na każdym etapie współpracy Marek jest pierwszym punktem kontaktu —
+                i dba o to, żebyś widział wartość w konkretnych liczbach.
               </p>
             </div>
           </div>
@@ -263,10 +246,10 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
                 Chief Technology Officer
               </p>
               <p className="text-white/45 text-sm leading-relaxed">
-                Inżynierskie serce firmy. Pasjonat informatyki i elektroniki od
-                najmłodszych lat, dla którego „nie da się" to tylko zaproszenie
-                do znalezienia rozwiązania. Michał bierze wizje na warsztat i
-                przekuwa je w niezawodny kod oraz workflowy n8n.
+                Zna technologię od podszewki — wie jak zbudować, skonfigurować
+                i zintegrować systemy. Wie co jest hype'em, a co realnie działa.
+                Michał przekuwa wymagania biznesowe w działające automatyzacje
+                i dba o to, żeby wdrożenia były proste, bezpieczne i trwałe.
               </p>
             </div>
           </div>
