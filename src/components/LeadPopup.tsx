@@ -75,7 +75,7 @@ export function LeadPopup() {
           ) : (
             <>
               <p className="text-[#4ed5cd] uppercase tracking-widest text-[10px] font-bold brand-font mb-3 pr-4">
-                Bezpłatna konsultacja
+                Zostaw swój kontakt
               </p>
               <form onSubmit={handleSubmit} className="space-y-3">
                 <input

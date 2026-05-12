@@ -282,10 +282,10 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
               >
-                <div className="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 group-hover:border-white/40 transition-colors shrink-0">
-                  <Facebook size={16} className="text-white/40 group-hover:text-white transition-colors" />
+                <div className="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 group-hover:border-cah-accent/40 transition-colors shrink-0">
+                  <Facebook size={16} className="text-white/40 group-hover:text-cah-accent transition-colors" />
                 </div>
-                <span className="text-white/50 group-hover:text-white transition-colors text-sm">
+                <span className="text-white/50 group-hover:text-cah-accent transition-colors text-sm">
                   Facebook
                 </span>
               </a>
@@ -295,10 +295,10 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
               >
-                <div className="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 group-hover:border-white/40 transition-colors shrink-0">
-                  <Instagram size={16} className="text-white/40 group-hover:text-white transition-colors" />
+                <div className="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 group-hover:border-cah-accent/40 transition-colors shrink-0">
+                  <Instagram size={16} className="text-white/40 group-hover:text-cah-accent transition-colors" />
                 </div>
-                <span className="text-white/50 group-hover:text-white transition-colors text-sm">
+                <span className="text-white/50 group-hover:text-cah-accent transition-colors text-sm">
                   Instagram
                 </span>
               </a>

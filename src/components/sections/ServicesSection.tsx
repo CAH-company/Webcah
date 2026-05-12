@@ -24,9 +24,6 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
             <BarChart2 size={120} />
           </div>
           <div className="relative z-10 flex flex-col h-full">
-            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-6 brand-font" style={{ color: accentColor }}>
-              USŁUGA A
-            </p>
             <h3 className="text-2xl font-bold mb-4 brand-font leading-tight">
               Audyt Technologiczny<br />i Mapa Drogowa
             </h3>
@@ -55,9 +52,6 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
             <Zap size={120} className="text-black" />
           </div>
           <div className="relative z-10 flex flex-col h-full">
-            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-6 brand-font text-black/50">
-              USŁUGA B
-            </p>
             <h3 className="text-2xl font-bold mb-4 brand-font text-black leading-tight">
               Wdrożenie Quick Wins<br />+ Szkolenie z AI
             </h3>
@@ -83,9 +77,6 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
             <Shield size={120} />
           </div>
           <div className="relative z-10 flex flex-col h-full">
-            <p className="text-xs uppercase tracking-[0.25em] font-bold mb-6 brand-font" style={{ color: accentColor }}>
-              USŁUGA C
-            </p>
             <h3 className="text-2xl font-bold mb-4 brand-font leading-tight">
               Partner Technologiczny<br />
               <span className="text-white/40 font-normal text-xl">(Fractional CTO)</span>
