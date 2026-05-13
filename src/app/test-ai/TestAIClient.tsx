@@ -141,7 +141,6 @@ export function TestAIClient() {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [company, setCompany] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
 
@@ -170,7 +169,7 @@ export function TestAIClient() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name, email, company,
+          name, email,
           answers: QUESTIONS.map((q, i) => ({
             question: q.question,
             category: q.category,
@@ -328,9 +327,8 @@ export function TestAIClient() {
 
         <form onSubmit={handleSubmit} className="space-y-0">
           {[
-            { key: 'name', label: 'Imię i Nazwisko *', type: 'text', value: name, setter: setName, placeholder: 'Jan Kowalski', required: true },
+            { key: 'name', label: 'Imię *', type: 'text', value: name, setter: setName, placeholder: 'Jan', required: true },
             { key: 'email', label: 'Email *', type: 'email', value: email, setter: setEmail, placeholder: 'jan@firma.pl', required: true },
-            { key: 'company', label: 'Nazwa Firmy', type: 'text', value: company, setter: setCompany, placeholder: 'Twoja Firma sp. z o.o.', required: false },
           ].map((f) => (
             <div key={f.key} className="py-4 border-b border-white/10">
               <label className="block text-[10px] uppercase tracking-[0.2em] text-white/30 mb-2 brand-font">
