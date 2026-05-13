@@ -17,22 +17,25 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.polandautomatio
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Poland Automations Hub - Automatyzacja procesów biznesowych",
-    template: "%s | Poland Automations Hub",
+    default: "Poland Automation Hub – Consulting IT i automatyzacja dla MŚP",
+    template: "%s | Poland Automation Hub",
   },
   description:
-    "Automatyzacja procesów biznesowych, AI, integracje systemowe i konsulting technologiczny. Zyskaj czas, zredukuj koszty, wyprzedź konkurencję z CAH.",
+    "Audyt technologiczny, automatyzacja procesów i wdrożenia AI dla polskich MŚP. Sprawdzamy gdzie tracisz czas i pieniądze — i wdrażamy konkretne rozwiązania. Poland Automation Hub, Kraków.",
   keywords: [
-    "automatyzacja procesów",
-    "RPA",
-    "sztuczna inteligencja",
-    "AI",
+    "automatyzacja procesów biznesowych",
+    "consulting IT dla MŚP",
+    "audyt technologiczny",
+    "wdrożenie AI",
     "integracje systemowe",
-    "consulting technologiczny",
-    "Poalnd",
-    "PAH",
-    "PAHub",
+    "Fractional CTO",
+    "automatyzacja n8n",
     "wdrożenia CRM",
+    "szkolenie AI dla firm",
+    "quick wins automatyzacja",
+    "Poland Automation Hub",
+    "PAH",
+    "consulting IT Kraków",
     "Business Process Automation",
   ],
   authors: [{ name: "Poland Automations Hub" }],
@@ -47,10 +50,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pl_PL",
     url: siteUrl,
-    siteName: "Poland Automations Hub",
-    title: "Poland Automations Hub - Automatyzacja procesów biznesowych",
+    siteName: "Poland Automation Hub",
+    title: "Poland Automation Hub – Consulting IT i automatyzacja dla MŚP",
     description:
-      "Automatyzacja procesów biznesowych, AI, integracje systemowe i konsulting technologiczny. Zyskaj czas, zredukuj koszty, wyprzedź konkurencję z CAH.",
+      "Audyt technologiczny, automatyzacja procesów i wdrożenia AI dla polskich MŚP. Sprawdzamy gdzie tracisz czas i pieniądze — i wdrażamy konkretne rozwiązania.",
     images: [
       {
         url: `${siteUrl}/og-image.jpg`,
@@ -62,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Poland Automations Hub - Automatyzacja procesów biznesowych",
+    title: "Poland Automation Hub – Consulting IT i automatyzacja dla MŚP",
     description:
-      "Automatyzacja procesów biznesowych, AI, integracje systemowe i konsulting technologiczny.",
+      "Audyt technologiczny, automatyzacja procesów i wdrożenia AI dla polskich MŚP. Konkretne rozwiązania, konkretne liczby.",
     images: [`${siteUrl}/og-image.jpg`],
   },
   robots: {
@@ -91,12 +94,12 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Poland Automations Hub",
+    name: "Poland Automation Hub",
     alternateName: "PAH",
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     description:
-      "Automatyzacja procesów biznesowych, AI, integracje systemowe i konsulting technologiczny.",
+      "Audyt technologiczny, automatyzacja procesów i wdrożenia AI dla polskich MŚP.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Kraków",

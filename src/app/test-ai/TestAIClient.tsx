@@ -8,93 +8,93 @@ const ACCENT = '#4ed5cd';
 
 const QUESTIONS = [
   {
-    category: 'Struktura firmy',
-    question: 'Ile osób liczy Twoja firma?',
+    category: 'Obszar A: Świadomość i strategia',
+    question: 'Czy w Waszej firmie ktoś odpowiada za wdrażanie nowych technologii lub AI?',
     options: [
-      { label: 'Do 10 osób', score: 1 },
-      { label: '11–30 osób', score: 2 },
-      { label: '31–50 osób', score: 3 },
-      { label: '51+ osób', score: 2 },
+      { label: 'Nie, nikt się tym nie zajmuje', score: 0 },
+      { label: 'Zajmuje się tym właściciel/zarząd doraźnie', score: 1 },
+      { label: 'Mamy osobę, która tym koordynuje obok innych zadań', score: 2 },
+      { label: 'Mamy dedykowaną osobę lub zespół', score: 3 },
     ],
   },
   {
-    category: 'Narzędzia i CRM',
-    question: 'Czy korzystacie z systemu CRM?',
+    category: 'Obszar A: Świadomość i strategia',
+    question: 'Jak często rozmawiacie w firmie o tym, jak AI mogłoby wpłynąć na Wasz biznes?',
     options: [
-      { label: 'Tak, aktywnie używamy', score: 4 },
-      { label: 'Mamy, ale mało kto z niego korzysta', score: 2 },
-      { label: 'Nie, używamy Excela lub maile', score: 1 },
-      { label: 'Nie wiem co to CRM', score: 0 },
+      { label: 'Wcale lub bardzo rzadko', score: 0 },
+      { label: 'Czasem, przy okazji', score: 1 },
+      { label: 'Regularnie, ale bez konkretów', score: 2 },
+      { label: 'Mamy konkretne plany lub strategię', score: 3 },
     ],
   },
   {
-    category: 'Zarządzanie zadaniami',
-    question: 'Jak zarządzacie zadaniami i projektami w firmie?',
+    category: 'Obszar A: Świadomość i strategia',
+    question: 'Czy znacie 3 największe zagrożenia dla Waszej branży związane z AI w ciągu 2 lat?',
     options: [
-      { label: 'Dedykowane narzędzie (Asana, Monday, Notion…)', score: 3 },
-      { label: 'Arkusze Google / Excel', score: 2 },
-      { label: 'Maile i komunikatory (WhatsApp, Slack)', score: 1 },
-      { label: 'Brak systemu — każdy robi po swojemu', score: 0 },
+      { label: 'Nie zastanawialiśmy się nad tym', score: 0 },
+      { label: 'Mamy ogólne przeczucia', score: 1 },
+      { label: 'Tak, ale nie mamy planu reakcji', score: 2 },
+      { label: 'Tak, i przygotowujemy odpowiedź', score: 3 },
     ],
   },
   {
-    category: 'Koszty narzędzi',
-    question: 'Ile płatnych narzędzi (SaaS) opłacacie miesięcznie?',
+    category: 'Obszar B: Dane i procesy',
+    question: 'Jak wyglądają Wasze procesy operacyjne (sprzedaż, obsługa klienta, księgowość)?',
     options: [
-      { label: '1–5 narzędzi', score: 1 },
-      { label: '6–10 narzędzi', score: 2 },
-      { label: '11–20 narzędzi', score: 3 },
-      { label: 'Nie wiem dokładnie', score: 1 },
+      { label: 'Głównie ręcznie, Excel i papier', score: 0 },
+      { label: 'Mamy kilka narzędzi, ale działają osobno', score: 1 },
+      { label: 'Większość procesów jest w systemach, częściowo zintegrowanych', score: 2 },
+      { label: 'Procesy są zdigitalizowane i zintegrowane', score: 3 },
     ],
   },
   {
-    category: 'Ręczna praca',
-    question: 'Ile czasu tygodniowo zespół spędza na ręcznym kopiowaniu i przepisywaniu danych?',
+    category: 'Obszar B: Dane i procesy',
+    question: 'Czy macie zebrane dane o klientach, sprzedaży, produktach w jednym miejscu?',
     options: [
-      { label: 'Prawie wcale', score: 4 },
-      { label: '2–5 godzin', score: 3 },
-      { label: '5–15 godzin', score: 1 },
-      { label: 'Ponad 15 godzin', score: 0 },
+      { label: 'Dane są rozproszone, trudno je zebrać', score: 0 },
+      { label: 'Są w kilku systemach, ale da się to zrobić', score: 1 },
+      { label: 'Mamy CRM/ERP gdzie większość danych jest spójna', score: 2 },
+      { label: 'Mamy uporządkowaną bazę gotową do analiz', score: 3 },
     ],
   },
   {
-    category: 'Dane i raportowanie',
-    question: 'Jak właściciel lub CEO ma dostęp do kluczowych danych biznesowych?',
+    category: 'Obszar B: Dane i procesy',
+    question: 'Czy ktoś w firmie używa już narzędzi AI (ChatGPT, Copilot, automatyzacje) w codziennej pracy?',
     options: [
-      { label: 'Mam dashboard — dane zawsze pod ręką', score: 4 },
-      { label: 'Pytam zespół gdy potrzebuję', score: 2 },
-      { label: 'Zbieram dane raz w miesiącu', score: 1 },
-      { label: 'Nie mam dobrego wglądu w dane', score: 0 },
+      { label: 'Nie, nikt', score: 0 },
+      { label: 'Pojedyncze osoby, prywatnie', score: 1 },
+      { label: 'Kilka osób, ale bez systemu', score: 2 },
+      { label: 'Tak, świadomie i z politykami firmy', score: 3 },
     ],
   },
   {
-    category: 'AI w firmie',
-    question: 'Czy ktoś w firmie regularnie używa AI w codziennej pracy?',
+    category: 'Obszar C: Gotowość do zmiany',
+    question: 'Jaki budżet rocznie przeznaczacie na narzędzia cyfrowe i technologię?',
     options: [
-      { label: 'Tak, wiele osób regularnie', score: 4 },
-      { label: 'Kilka osób eksperymentuje', score: 3 },
-      { label: 'Sporadycznie — jeden-dwa przypadki', score: 1 },
-      { label: 'Nikt nie używa AI', score: 0 },
+      { label: 'Mniej niż 5 tys. zł lub nie wiemy', score: 0 },
+      { label: '5–20 tys. zł', score: 1 },
+      { label: '20–100 tys. zł', score: 2 },
+      { label: 'Powyżej 100 tys. zł', score: 3 },
     ],
   },
   {
-    category: 'Adaptacja technologiczna',
-    question: 'Jak firma reaguje na nowe narzędzia i technologie?',
+    category: 'Obszar C: Gotowość do zmiany',
+    question: 'Jak Wasz zespół reaguje na nowe narzędzia i zmiany w procesach?',
     options: [
-      { label: 'Aktywnie szukamy nowych rozwiązań', score: 4 },
-      { label: 'Wdrażamy gdy widzimy konkretną korzyść', score: 3 },
-      { label: 'Czekamy aż inni sprawdzą', score: 1 },
-      { label: 'Zmiany technologiczne to u nas problem', score: 0 },
+      { label: 'Z dużym oporem, ciężko cokolwiek wdrożyć', score: 0 },
+      { label: 'Część się opiera, część akceptuje', score: 1 },
+      { label: 'Większość jest otwarta przy dobrym wdrożeniu', score: 2 },
+      { label: 'Zespół sam zgłasza pomysły na usprawnienia', score: 3 },
     ],
   },
   {
-    category: 'Dane o klientach',
-    question: 'Czy firma zbiera i analizuje dane o klientach i procesach?',
+    category: 'Obszar C: Gotowość do zmiany',
+    question: 'Co najbardziej powstrzymuje Was przed wdrożeniem AI?',
     options: [
-      { label: 'Tak, regularnie i świadomie', score: 4 },
-      { label: 'Zbieramy, ale rzadko analizujemy', score: 2 },
-      { label: 'Tylko podstawowe dane', score: 1 },
-      { label: 'Prawie wcale', score: 0 },
+      { label: 'Nie wiemy od czego zacząć', score: 0 },
+      { label: 'Brak czasu i zasobów', score: 1 },
+      { label: 'Niepewność co do ROI i zwrotu', score: 2 },
+      { label: 'Nic — szukamy konkretnych rozwiązań', score: 3 },
     ],
   },
 ];
@@ -224,16 +224,20 @@ export function TestAIClient() {
     const q = QUESTIONS[step];
     const progressPct = (step / QUESTIONS.length) * 100;
     return (
-      <main className="min-h-screen bg-[#0a0a0a] flex flex-col px-6 py-12 md:py-20">
+      <main className="min-h-screen bg-[#0a0a0a] flex flex-col px-6 pt-28 pb-12 md:pt-32 md:pb-20">
         {/* Progress */}
         <div className="max-w-2xl w-full mx-auto mb-12">
           <div className="flex items-center justify-between mb-3">
-            <button
-              onClick={() => (step > 0 ? setStep((s) => s - 1) : setPhase('intro'))}
-              className="flex items-center gap-2 text-white/30 hover:text-white transition-colors text-sm"
-            >
-              <ArrowLeft size={14} /> Wróć
-            </button>
+            {step > 0 ? (
+              <button
+                onClick={() => setStep((s) => s - 1)}
+                className="flex items-center gap-2 text-white/30 hover:text-white transition-colors text-sm"
+              >
+                <ArrowLeft size={14} /> Wróć
+              </button>
+            ) : (
+              <div />
+            )}
             <span className="text-white/30 text-xs brand-font uppercase tracking-widest">
               {step + 1} / {QUESTIONS.length}
             </span>
@@ -289,6 +293,12 @@ export function TestAIClient() {
   if (phase === 'gate') return (
     <main className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center px-6 py-24">
       <div className="max-w-lg w-full">
+        <button
+          onClick={() => setPhase('quiz')}
+          className="flex items-center gap-2 text-white/30 hover:text-white transition-colors text-sm mb-10"
+        >
+          <ArrowLeft size={14} /> Wróć do testu
+        </button>
         <p className="text-xs uppercase tracking-[0.25em] font-bold brand-font mb-6 text-center" style={{ color: ACCENT }}>
           TWOJE WYNIKI SĄ GOTOWE
         </p>
