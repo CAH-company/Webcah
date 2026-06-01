@@ -5,7 +5,7 @@ type ServicesSectionProps = {
 };
 
 export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
-  <section className="pt-20 pb-16 md:pt-40 md:pb-24 px-6 bg-cah-bg animate-fade-in">
+  <section className="pt-20 pb-16 md:pt-40 md:pb-24 px-6">
     <div className="container mx-auto">
       <div className="mb-16 border-b border-white/10 pb-8">
         <h2 className="text-5xl md:text-7xl font-bold mb-6 brand-font">
@@ -19,8 +19,15 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         {/* A — Audyt */}
-        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card flex flex-col group relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-100 transition-opacity duration-500" style={{ color: accentColor }}>
+        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card card-shimmer flex flex-col group relative overflow-hidden">
+          <div
+            className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{
+              color: accentColor,
+              maskImage: 'linear-gradient(225deg, black 35%, transparent 68%)',
+              WebkitMaskImage: 'linear-gradient(225deg, black 35%, transparent 68%)',
+            }}
+          >
             <BarChart2 size={120} />
           </div>
           <div className="relative z-10 flex flex-col h-full">
@@ -28,10 +35,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
               Audyt Technologiczny<br />i Mapa Drogowa
             </h3>
             <p className="text-white/55 text-sm leading-relaxed mb-6 flex-1">
-              Wchodzimy do firmy i prześwietlamy ją od środka. Wywiady z zespołem, mapa
-              procesów, audyt każdego narzędzia i analiza gotowości na AI. Dostajesz konkretny
-              raport — ile tracisz i co zmienić w jakiej kolejności. Nie 200 stron, których nikt
-              nie przeczyta.
+              Wchodzimy do firmy i mapujemy ją od podstaw. Wywiady z zespołem, przegląd każdego narzędzia i analiza gotowości na AI. Efekt: konkretny raport z liczbami i listą działań w kolejności priorytetów.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Audyt narzędzi", "Mapa procesów", "AI Readiness", "Quick Wins"].map((tag) => (
@@ -45,10 +49,10 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
 
         {/* B — Quick Wins */}
         <div
-          className="p-8 rounded-3xl hover-card flex flex-col relative overflow-hidden"
+          className="p-8 rounded-3xl hover-card card-shimmer flex flex-col relative overflow-hidden"
           style={{ backgroundColor: accentColor }}
         >
-          <div className="absolute top-0 right-0 p-6 opacity-10">
+          <div className="absolute top-0 right-0 p-6 opacity-10 pointer-events-none">
             <Zap size={120} className="text-black" />
           </div>
           <div className="relative z-10 flex flex-col h-full">
@@ -56,10 +60,7 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
               Wdrożenie Quick Wins<br />+ Szkolenie z AI
             </h3>
             <p className="text-black/70 text-sm leading-relaxed mb-6 flex-1">
-              Nie tylko mówimy co zmienić — robimy to. Konsolidujemy narzędzia, ustawiamy
-              automatyzacje, budujemy proste rozwiązania wewnętrzne. Plus szkolimy zespół jak
-              używać AI w codziennej pracy — konkretnie, pod Waszą branżę. Nie "AI for
-              beginners".
+              Konsolidujemy narzędzia, wdrażamy automatyzacje i budujemy rozwiązania dopasowane do Waszego biznesu. Szkolimy też zespół z AI pod Waszą branżę, nie z teorii, a z praktycznego zastosowania w codziennej pracy.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Automatyzacje", "Migracje", "Szkolenie AI", "Quick Wins"].map((tag) => (
@@ -72,19 +73,23 @@ export const ServicesSection = ({ accentColor }: ServicesSectionProps) => (
         </div>
 
         {/* C — Partner */}
-        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card flex flex-col group relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-100 transition-opacity duration-500" style={{ color: accentColor }}>
+        <div className="bg-cah-bg-card border border-white/10 p-8 rounded-3xl hover-card card-shimmer flex flex-col group relative overflow-hidden">
+          <div
+            className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{
+              color: accentColor,
+              maskImage: 'linear-gradient(225deg, black 35%, transparent 68%)',
+              WebkitMaskImage: 'linear-gradient(225deg, black 35%, transparent 68%)',
+            }}
+          >
             <Shield size={120} />
           </div>
           <div className="relative z-10 flex flex-col h-full">
             <h3 className="text-2xl font-bold mb-4 brand-font leading-tight">
-              Partner Technologiczny<br />
-              <span className="text-white/40 font-normal text-xl">(Fractional CTO)</span>
+              Partner Technologiczny
             </h3>
             <p className="text-white/55 text-sm leading-relaxed mb-6 flex-1">
-              Twój dział IT, bez zatrudniania działu IT. Stały nadzór nad kosztami,
-              wdrożenia z roadmapy, szkolenia i wsparcie na Slacku. Co miesiąc raport
-              co zrobiliśmy i co planujemy — żebyś widział wartość w liczbach.
+              Twój dział IT, bez zatrudniania działu IT. Stały nadzór nad kosztami, wdrożenia z roadmapy i wsparcie na bieżąco. Co miesiąc raport z tym, co zrobiliśmy i co planujemy, żebyś zawsze wiedział, na co idą Twoje pieniądze.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Stały nadzór", "Optymalizacja kosztów", "Slack/mail", "Raporty"].map((tag) => (

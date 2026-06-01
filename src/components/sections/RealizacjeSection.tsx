@@ -7,7 +7,7 @@ type RealizacjeSectionProps = {
 };
 
 export const RealizacjeSection = ({ accentColor }: RealizacjeSectionProps) => (
-  <section className="pt-20 pb-16 md:pt-40 md:pb-24 px-6" style={{ background: "#050505" }}>
+  <section className="pt-20 pb-16 md:pt-40 md:pb-24 px-6">
     <div className="container mx-auto">
 
       {/* Header */}

@@ -47,7 +47,7 @@ function LogoStrip({ logos, direction = "left" }: { logos: LogoItem[]; direction
 }
 
 export const LogoCarousels = () => (
-  <section className="py-16 px-6 bg-cah-bg border-t border-white/5">
+  <section className="py-16 px-6 border-t border-white/5">
     <div className="container mx-auto">
       <div className="mb-12">
         <p className="text-center text-xs uppercase tracking-[0.3em] text-white/30 mb-8 brand-font">

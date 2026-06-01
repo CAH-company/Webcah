@@ -8,7 +8,7 @@ const ACCENT = "#4ed5cd";
 
 export default function Home() {
   return (
-    <div className="bg-cah-bg text-white font-sans selection:bg-cah-accent selection:text-black overflow-x-hidden">
+    <div className="text-white font-sans selection:bg-cah-accent selection:text-black overflow-x-hidden">
       <div className="noise-bg" />
       <main>
         <div id="home">

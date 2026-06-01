@@ -64,19 +64,19 @@ function RatingButtons({ value, onChange }: { value: number | null; onChange: (v
 }
 
 export function AnkietaClient() {
-  const [nps, setNps] = useState<number | null>(null);
+  const [firma, setFirma] = useState('');
   const [communication, setCommunication] = useState<number | null>(null);
-  const [expectations, setExpectations] = useState<number | null>(null);
   const [valueForMoney, setValueForMoney] = useState<number | null>(null);
+  const [mostValuable, setMostValuable] = useState('');
   const [whatWentWell, setWhatWentWell] = useState('');
   const [improvements, setImprovements] = useState('');
   const [nextSteps, setNextSteps] = useState('');
-  const [firma, setFirma] = useState('');
+  const [nps, setNps] = useState<number | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
   const [error, setError] = useState('');
 
-  const canSubmit = nps !== null && communication !== null && expectations !== null && valueForMoney !== null;
+  const canSubmit = nps !== null && communication !== null && valueForMoney !== null && firma.trim().length >= 2;
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -87,7 +87,7 @@ export function AnkietaClient() {
       const res = await fetch('/api/ankieta', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nps, communication, expectations, valueForMoney, whatWentWell, improvements, nextSteps, firma }),
+        body: JSON.stringify({ nps, communication, mostValuable, valueForMoney, whatWentWell, improvements, nextSteps, firma }),
       });
       if (res.ok) setDone(true);
       else setError('Coś poszło nie tak. Spróbuj ponownie.');
@@ -124,10 +124,9 @@ export function AnkietaClient() {
     <main className="min-h-screen bg-[#0a0a0a] px-6 py-16 md:py-24">
       <div className="max-w-xl mx-auto">
 
-        {/* Header */}
         <div className="mb-14">
           <p className="text-xs uppercase tracking-[0.3em] font-bold brand-font mb-4" style={{ color: ACCENT }}>
-            POLAND AUTOMATION HUB
+            POLAND AUTOMATIONS HUB
           </p>
           <h1 className="text-4xl md:text-5xl font-bold brand-font leading-[1.05] mb-4">
             Ankieta satysfakcji
@@ -139,33 +138,26 @@ export function AnkietaClient() {
 
         <form onSubmit={handleSubmit} className="space-y-0">
 
-          {/* Firma (opcjonalne) */}
+          {/* Firma — wymagane */}
           <div className="py-6 border-b border-white/10">
             <label className="block text-[10px] uppercase tracking-[0.2em] text-white/30 mb-2 brand-font">
-              Nazwa Firmy <span className="text-white/20">(opcjonalne)</span>
+              Nazwa Firmy <span style={{ color: ACCENT }}>*</span>
             </label>
             <input
               type="text"
               value={firma}
               onChange={e => setFirma(e.target.value)}
+              required
+              minLength={2}
               maxLength={100}
               placeholder="Twoja Firma sp. z o.o."
               className="w-full bg-transparent text-white placeholder-white/20 text-base focus:outline-none"
             />
           </div>
 
-          {/* NPS */}
+          {/* Q1 — Komunikacja */}
           <div className="py-8 border-b border-white/10">
-            <p className="text-xs uppercase tracking-[0.2em] text-white/30 mb-1 brand-font">Pytanie 1 / 4 *</p>
-            <p className="text-lg font-bold brand-font mb-6 leading-snug">
-              Jak bardzo polecił(a)byś Poland Automation Hub znajomym lub partnerom biznesowym?
-            </p>
-            <NpsButtons value={nps} onChange={setNps} />
-          </div>
-
-          {/* Komunikacja */}
-          <div className="py-8 border-b border-white/10">
-            <p className="text-xs uppercase tracking-[0.2em] text-white/30 mb-1 brand-font">Pytanie 2 / 4 *</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-white/30 mb-1 brand-font">Pytanie 1 / 3 *</p>
             <p className="text-lg font-bold brand-font mb-6 leading-snug">
               Jak oceniasz jakość komunikacji z naszym zespołem?
             </p>
@@ -176,22 +168,9 @@ export function AnkietaClient() {
             </div>
           </div>
 
-          {/* Oczekiwania */}
+          {/* Q2 — Cena/jakość */}
           <div className="py-8 border-b border-white/10">
-            <p className="text-xs uppercase tracking-[0.2em] text-white/30 mb-1 brand-font">Pytanie 3 / 4 *</p>
-            <p className="text-lg font-bold brand-font mb-6 leading-snug">
-              Czy wyniki i raport spełniły Twoje oczekiwania?
-            </p>
-            <RatingButtons value={expectations} onChange={setExpectations} />
-            <div className="flex justify-between mt-2">
-              <span className="text-white/25 text-xs">Poniżej oczekiwań</span>
-              <span className="text-white/25 text-xs">Przekroczyły oczekiwania</span>
-            </div>
-          </div>
-
-          {/* Cena/jakość */}
-          <div className="py-8 border-b border-white/10">
-            <p className="text-xs uppercase tracking-[0.2em] text-white/30 mb-1 brand-font">Pytanie 4 / 4 *</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-white/30 mb-1 brand-font">Pytanie 2 / 3 *</p>
             <p className="text-lg font-bold brand-font mb-6 leading-snug">
               Jak oceniasz stosunek jakości do ceny?
             </p>
@@ -200,6 +179,21 @@ export function AnkietaClient() {
               <span className="text-white/25 text-xs">Niezadowalający</span>
               <span className="text-white/25 text-xs">Bardzo dobry</span>
             </div>
+          </div>
+
+          {/* Co było wartościowe — opcjonalne, tekst */}
+          <div className="py-6 border-b border-white/10">
+            <label className="block text-[10px] uppercase tracking-[0.2em] text-white/30 mb-2 brand-font">
+              Co z raportu lub wdrożenia było dla Ciebie najbardziej wartościowe? <span className="text-white/20">(opcjonalne)</span>
+            </label>
+            <textarea
+              rows={3}
+              value={mostValuable}
+              onChange={e => setMostValuable(e.target.value)}
+              maxLength={2000}
+              placeholder="Opisz co przyniosło Ci największą wartość..."
+              className="w-full bg-transparent text-white placeholder-white/20 text-base focus:outline-none resize-none"
+            />
           </div>
 
           {/* Co poszło dobrze */}
@@ -256,11 +250,20 @@ export function AnkietaClient() {
             </div>
           </div>
 
+          {/* Q3 — NPS (ostatnie) */}
+          <div className="py-8 border-b border-white/10">
+            <p className="text-xs uppercase tracking-[0.2em] text-white/30 mb-1 brand-font">Pytanie 3 / 3 *</p>
+            <p className="text-lg font-bold brand-font mb-6 leading-snug">
+              Jak bardzo poleciłbyś Poland Automations Hub znajomym lub partnerom biznesowym?
+            </p>
+            <NpsButtons value={nps} onChange={setNps} />
+          </div>
+
           {/* Submit */}
           <div className="pt-8">
             {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
             {!canSubmit && (
-              <p className="text-white/25 text-xs mb-4">* Uzupełnij pytania 1–4 żeby wysłać ankietę.</p>
+              <p className="text-white/25 text-xs mb-4">* Podaj nazwę firmy i uzupełnij pytania 1–3 żeby wysłać ankietę.</p>
             )}
             <button
               type="submit"

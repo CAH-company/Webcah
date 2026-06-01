@@ -18,25 +18,25 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "automatyzacja-cyklu-sprzedazowego",
-    industry: "Sprzedaż B2B",
-    metric: "−80%",
-    metricLabel: "czasu na powtarzalne zadania",
-    projectName: "Automatyzacja cyklu sprzedażowego",
+    slug: "audyt-i-wdrozenie-infrastruktury-it",
+    industry: "Szkolenia i coaching",
+    metric: "−40%",
+    metricLabel: "kosztów narzędzi IT",
+    projectName: "Audyt i wdrożenie infrastruktury IT",
     client: "Perfect Circle",
     about:
-      "Perfect Circle to warszawska firma konsultingowa specjalizująca się w doradztwie strategicznym dla spółek z sektora MŚP. Obsługując rosnące portfolio klientów, firma szybko napotkała granicę skalowalności — każdy nowy kontrakt generował proporcjonalnie więcej pracy administracyjnej, a handlowcy coraz więcej czasu spędzali na uzupełnianiu CRM zamiast na rozmowach z klientami. Celem współpracy z PAH było odchudzenie operacji i uwolnienie zespołu sprzedażowego do pracy, która realnie przynosi przychód.",
+      "Perfect Circle to polska firma z branży szkoleniowej i coachingowej prowadzona przez Marka Wzorka. Działa na rynku profesjonalnego rozwoju kadr — organizuje szkolenia, warsztaty i programy rozwojowe dla firm. Firma dynamicznie rosła, ale jej infrastruktura technologiczna nie nadążała za rozwojem. Pracownicy używali prywatnych kont Gmail, dokumenty były porozrzucane, a CRM działał błędnie. PAH wszedł jako partner technologiczny, który posprzątał ten chaos — szybko, profesjonalnie i bez zatrzymywania pracy firmy.",
     teaser:
-      "Wdrożyliśmy kompletny system automatyzacji procesów sprzedażowych — od leada po fakturę, bez udziału handlowca.",
+      "Od chaosu na prywatnych Gmailach do profesjonalnej infrastruktury IT — wdrożone w jeden weekend, bez dnia przestoju.",
     challenge:
-      "Firma traciła dziesiątki godzin tygodniowo na ręczne prowadzenie CRM, tworzenie ofert i wysyłkę follow-upów. Handlowcy spędzali więcej czasu na administracji niż na rozmowach z klientami.",
+      "Pracownicy korzystali z prywatnych kont Gmail zamiast firmowych, pliki były porozrzucane po prywatnych dyskach, a wdrożony Pipedrive nie działał poprawnie — brak synchronizacji z kalendarzem i automatycznych przypomnień powodował, że leady ginęły w lejku i follow-upy się nie odbywały.",
     solution:
-      "Zbudowaliśmy zautomatyzowany ekosystem oparty na Pipedrive i n8n. AI uczestniczy w spotkaniach, automatycznie je podsumowuje i aktualizuje CRM. System sam generuje spersonalizowane oferty i uruchamia sekwencje follow-up, gdy lead nie odpowiada.",
+      "Wdrożyliśmy Google Workspace z domeną firmową i ustrukturyzowaliśmy zasoby cyfrowe na Google Drive. Naprawiliśmy konfigurację Pipedrive — integracja z Kalendarzem Google, automatyczne przypomnienia i lejek sprzedażowy skrojony pod procesy firmy. Całą migrację przeprowadziliśmy w trybie Zero Downtime — w poniedziałek rano zespół logował się do gotowego, działającego środowiska.",
     results: [
-      "−80% czasu poświęcanego na administrację sprzedażową",
-      "Automatyczne podsumowania spotkań trafiające bezpośrednio do CRM",
-      "Sekwencje follow-up uruchamiane bez udziału handlowca",
-      "Pełna szczelność lejka — żaden lead nie gubi się w systemie",
+      "−40% kosztów narzędzi IT po konsolidacji środowiska pracy",
+      "~12 godzin tygodniowo zaoszczędzone na ręcznym zarządzaniu",
+      "0 dni przestoju — migracja przeprowadzona w trybie Zero Downtime",
+      "Profesjonalna infrastruktura IT gotowa na dalsze skalowanie i automatyzacje",
     ],
     Icon: TrendingDown,
   },
@@ -64,25 +64,25 @@ export const caseStudies: CaseStudy[] = [
     Icon: Clock,
   },
   {
-    slug: "integracja-sklepu-z-erp",
-    industry: "E-commerce",
+    slug: "szkolenie-ai-i-automatyzacja",
+    industry: "Turystyka",
     metric: "3×",
-    metricLabel: "szybsza obsługa zamówień",
-    projectName: "Integracja sklepu z ERP i CRM",
-    client: "NordShop",
+    metricLabel: "szybsze tworzenie ofert",
+    projectName: "Szkolenie z AI i automatyzacji",
+    client: "Biegunsport",
     about:
-      "NordShop to rozwijający się sklep e-commerce z siedzibą w Poznaniu, oferujący produkty dla domu z segmentu premium. Przy kilkuset zamówieniach dziennie i trzech niepołączonych ze sobą systemach — sklepem WooCommerce, magazynem i CRM — obsługa każdego zamówienia wymagała ręcznej interwencji pracownika. Rosnąca skala sprzedaży sprawiała, że manualne procesy zaczęły generować błędy i opóźnienia niemożliwe do zaakceptowania przez klientów końcowych.",
+      "Biegunsport to firma turystyczna specjalizująca się w aktywnych wycieczkach i programach outdoorowych. Kiedy trafili do PAH, pracownicy spędzali dziesiątki godzin tygodniowo na ręcznym tworzeniu ofert, obsłudze powtarzających się zapytań klientów i przygotowywaniu materiałów marketingowych. Celem współpracy było praktyczne przeszkolenie całego zespołu z użycia narzędzi AI i automatyzacji — tak, żeby realne zadania firmy zaczęły działać szybciej i sprawniej już od następnego dnia roboczego.",
     teaser:
-      "Każde zamówienie obsługiwane w sekundy — faktura, magazyn i klient powiadamiany w jednym przepływie.",
+      "Praktyczne szkolenie z AI i automatyzacji dopasowane do realiów turystyki — cały zespół gotowy do działania od pierwszego dnia.",
     challenge:
-      "Sklep internetowy z kilkuset zamówieniami dziennie działał na trzech niepołączonych systemach. Pracownicy ręcznie przepisywali dane między platformami — błędy były nieuniknione, a czas realizacji zbyt długi.",
+      "Tworzenie spersonalizowanych ofert wycieczek zajmowało pracownikom nawet kilka godzin dziennie. Odpowiedzi na powtarzające się pytania klientów, opisywanie tras i przygotowywanie postów do social mediów — wszystko odbywało się ręcznie, bez żadnego wsparcia AI. Firma wiedziała, że narzędzia istnieją, ale nie wiedziała, jak je realnie wdrożyć.",
     solution:
-      "Zintegrowaliśmy WooCommerce, system magazynowy i CRM przez n8n. Każde nowe zamówienie automatycznie uruchamia cały przepływ: weryfikację płatności, wystawienie faktury, aktualizację magazynu, powiadomienie kuriera i e-mail do klienta — w ciągu kilku sekund.",
+      "Przeprowadziliśmy intensywne szkolenie skrojone pod realia branży turystycznej — od praktycznego użycia modeli językowych (ChatGPT, Claude) do codziennych zadań, przez automatyzację powtarzalnych procesów w n8n, po budowanie własnych szablonów i biblioteki promptów dla ofert wycieczek. Każde ćwiczenie opierało się na realnych przykładach z działalności Biegunsport.",
     results: [
-      "3× szybsza obsługa każdego zamówienia",
-      "Automatyczne faktury i aktualizacje stanów magazynowych",
-      "Zero ręcznego przepisywania danych między systemami",
-      "Klient otrzymuje potwierdzenie wysyłki w ciągu minut od złożenia zamówienia",
+      "3× szybsze tworzenie spersonalizowanych ofert wycieczek dzięki AI",
+      "Automatyczne odpowiedzi na najczęstsze pytania klientów — bez udziału pracownika",
+      "Własna biblioteka promptów i szablonów dopasowanych do branży turystycznej",
+      "Cały zespół samodzielnie pracujący z narzędziami AI po zakończeniu szkolenia",
     ],
     Icon: TrendingUp,
   },

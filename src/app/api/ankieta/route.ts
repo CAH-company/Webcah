@@ -2,14 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 
 const schema = z.object({
+  firma: z.string().min(2).max(100),
   nps: z.number().int().min(0).max(10),
   communication: z.number().int().min(1).max(5),
-  expectations: z.number().int().min(1).max(5),
   valueForMoney: z.number().int().min(1).max(5),
+  mostValuable: z.string().max(2000).optional().default(''),
   whatWentWell: z.string().max(2000).optional().default(''),
   improvements: z.string().max(2000).optional().default(''),
   nextSteps: z.string().max(200).optional().default(''),
-  firma: z.string().max(100).optional().default(''),
 });
 
 export async function POST(request: NextRequest) {
@@ -25,8 +25,8 @@ export async function POST(request: NextRequest) {
 
   const webhookUrl = process.env.SURVEY_WEBHOOK_URL;
   if (!webhookUrl) {
-    console.warn('[Ankieta API] SURVEY_WEBHOOK_URL not configured — skipping forward');
-    return NextResponse.json({ message: 'OK' });
+    console.error('[Ankieta API] SURVEY_WEBHOOK_URL not configured');
+    return NextResponse.json({ message: 'Błąd konfiguracji serwera.' }, { status: 500 });
   }
 
   const res = await fetch(webhookUrl, {

@@ -96,7 +96,7 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
   };
 
   return (
-    <section className="pt-20 pb-16 md:pt-40 md:pb-24 px-6 animate-fade-in" style={{ background: "#0a0a0a" }}>
+    <section className="pt-20 pb-16 md:pt-40 md:pb-24 px-6">
       <div className="container mx-auto max-w-6xl">
 
         {/* Header */}
@@ -112,6 +112,33 @@ export const ContactSection = ({ accentColor }: ContactSectionProps) => {
           <p className="text-white/45 text-base leading-relaxed lg:pb-2">
             Bezpłatna konsultacja, 30 minut. Pytamy o procesy, narzędzia i wyzwania.
             Oceniamy, czy jest sens współpracy. Bez zobowiązań.
+          </p>
+        </div>
+
+        {/* Free intro training callout */}
+        <div
+          className="mb-16 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-10 px-7 py-6 rounded-2xl"
+          style={{
+            background: "rgba(255,255,255,0.02)",
+            border: "1px solid rgba(255,255,255,0.06)",
+            borderLeft: `3px solid ${accentColor}`,
+          }}
+        >
+          <div className="shrink-0">
+            <p
+              className="text-[10px] tracking-[0.25em] uppercase font-bold brand-font mb-1"
+              style={{ color: accentColor }}
+            >
+              Gdzie zacząć?
+            </p>
+            <p className="text-white text-base font-semibold brand-font leading-snug">
+              Bezpłatne szkolenie zapoznawcze
+            </p>
+          </div>
+          <p className="text-white/40 text-sm leading-relaxed flex-1">
+            Zanim cokolwiek wdrożymy — organizujemy bezpłatne szkolenie zapoznawcze
+            z AI dla Twojego zespołu. Poznajemy procesy, identyfikujemy realne
+            możliwości i przygotowujemy konkretny raport. Bez zobowiązań.
           </p>
         </div>
 

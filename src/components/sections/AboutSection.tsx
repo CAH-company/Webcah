@@ -6,20 +6,8 @@ type AboutSectionProps = {
 };
 
 export const AboutSection = ({ accentColor }: AboutSectionProps) => (
-  <section className="relative pt-20 pb-20 md:pt-40 md:pb-32 px-6 overflow-hidden" style={{ background: "#0a0a0a" }}>
-
-    {/* Ambient glow top-right */}
-    <div
-      className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full pointer-events-none"
-      style={{
-        background: accentColor,
-        opacity: 0.04,
-        filter: "blur(180px)",
-        transform: "translate(30%, -30%)",
-      }}
-    />
-
-    <div className="container mx-auto max-w-6xl relative z-10">
+  <section className="pt-20 pb-20 md:pt-40 md:pb-32 px-6">
+    <div className="container mx-auto max-w-6xl">
 
       {/* ── INTRO ROW ── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-24 items-start mb-28">
@@ -43,30 +31,18 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
             przed{" "}
             <span style={{ color: accentColor }}>technologią</span>
           </h2>
-          <p className="text-white/55 text-lg leading-[1.85] mb-14 max-w-lg">
-            Nie zaczynamy od pytania „jakie macie systemy". Zaczynamy od
-            „jak wygląda Wasz dzień i co Was frustruje". Najpierw rozumiemy
-            problem biznesowy — dopiero potem dobieramy technologię.
-            Nie mamy umów partnerskich z żadnym dostawcą — rekomendujemy
-            to, co jest najlepsze dla klienta. Nawet jeśli to darmowe rozwiązanie.
+          <p className="text-white/55 text-lg leading-[1.85] max-w-lg">
+            Poland Automations Hub to dwuosobowy team z Krakowa. Działamy na
+            styku biznesu i technologii: wchodzimy do firm MŚP, mapujemy procesy
+            i mówimy wprost, co z tym zrobić. Nie mamy umów z żadnym dostawcą
+            narzędzi, więc rekomendujemy to, co realnie działa dla Twojego biznesu,
+            nawet jeśli to darmowe rozwiązanie. Każdy projekt prowadzimy sami,
+            od audytu po wdrożenie.
           </p>
-
-          <div className="flex flex-col gap-4">
-            {[
-              "Nie sprzedajemy narzędzi — rekomendujemy to, co jest najlepsze dla klienta.",
-              "Każdy projekt prowadzimy bezpośrednio — bez warstw pośrednich.",
-              "Rozumiemy realia polskich MŚP, bo sami nimi jesteśmy.",
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: accentColor }} />
-                <p className="text-white/50 text-sm leading-relaxed">{item}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Right — visual panel */}
-        <div className="relative min-h-[320px] md:min-h-[520px] rounded-3xl overflow-hidden border border-white/[0.07]">
+        <div className="relative min-h-[320px] md:min-h-[520px] rounded-3xl overflow-hidden border border-white/[0.07] transition-all duration-500 hover:border-cah-accent/30 hover:scale-[1.015] hover:shadow-[0_0_60px_rgba(78,213,205,0.08)] panel-reveal">
           {/* Background photo */}
           <div
             className="absolute inset-0 bg-cover bg-center grayscale"
@@ -166,7 +142,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
 
           {/* Marek */}
           <div
-            className="group rounded-3xl overflow-hidden border border-white/[0.07] transition-colors duration-500 hover:border-cah-accent/40"
+            className="group rounded-3xl overflow-hidden border border-white/[0.07] transition-all duration-500 hover:border-cah-accent/40 hover-card card-shimmer"
             style={{ background: "#0c0c0c" }}
           >
             <div className="relative h-56 md:h-80 overflow-hidden">
@@ -211,7 +187,7 @@ export const AboutSection = ({ accentColor }: AboutSectionProps) => (
 
           {/* Michał */}
           <div
-            className="group rounded-3xl overflow-hidden border border-white/[0.07] transition-colors duration-500 hover:border-cah-accent/40"
+            className="group rounded-3xl overflow-hidden border border-white/[0.07] transition-all duration-500 hover:border-cah-accent/40 hover-card card-shimmer"
             style={{ background: "#0c0c0c" }}
           >
             <div className="relative h-56 md:h-80 overflow-hidden">

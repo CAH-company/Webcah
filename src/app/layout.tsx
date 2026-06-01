@@ -5,6 +5,8 @@ import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { LeadPopup } from "@/components/LeadPopup";
+import { LoadingScreen } from "@/components/LoadingScreen";
+import { AnimatedCanvas } from "@/components/AnimatedCanvas";
 
 const brandFont = localFont({
   src: "./fonts/DejaVuSans.ttf",
@@ -126,9 +128,18 @@ export default function RootLayout({
         />
       </head>
       <body className={`${brandFont.variable} antialiased`}>
-        <Navigation />
-        {children}
-        <Footer />
+        {/* Canvas particle system — fixed, covers full viewport */}
+        <AnimatedCanvas />
+        <div className="dot-grid" aria-hidden="true" />
+
+        {/* Content above canvas */}
+        <div className="relative" style={{ zIndex: 1 }}>
+          <LoadingScreen />
+          <Navigation />
+          {children}
+          <Footer />
+        </div>
+
         <LeadPopup />
 
         {/* Microsoft Clarity — ustaw NEXT_PUBLIC_CLARITY_ID w .env.local */}
