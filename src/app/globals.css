@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#home,
+#problemy,
+#uslugi,
+#jak-pracujemy,
+#o-nas,
+#realizacje,
+#kontakt {
+  scroll-margin-top: 80px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cah-accent: #4ed5cd;
+  --color-cah-bg: #0a0a0a;
+  --color-cah-bg-dark: #050505;
+  --color-cah-bg-card: #111111;
+  --font-sans: var(--font-brand), "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+body {
+  background: var(--color-cah-bg);
+  color: #ffffff;
+  font-family: var(--font-brand), "Inter", system-ui, -apple-system, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand-font {
+  font-family: var(--font-brand), "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.noise-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.stroke-text {
+  -webkit-text-stroke: 1px var(--color-cah-accent);
+  color: transparent;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+
+.hover-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    border-color 0.3s ease,
+    box-shadow 0.4s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-cah-accent);
+  box-shadow: 0 0 0 1px rgba(78, 213, 205, 0.12),
+    0 24px 60px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(78, 213, 205, 0.06);
+}
+
+@keyframes cardShimmer {
+  from { transform: translateX(-100%) skewX(-12deg); }
+  to   { transform: translateX(300%) skewX(-12deg); }
+}
+
+.card-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(78, 213, 205, 0.05),
+    transparent
+  );
+  transform: translateX(-100%) skewX(-12deg);
+  pointer-events: none;
+}
+
+.card-shimmer:hover::after {
+  animation: cardShimmer 0.75s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+.animate-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.93) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-logos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-logos-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Panel reveal animation (About section visual panel) */
+@keyframes panelReveal {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.panel-reveal {
+  animation: panelReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+
+/* Loading screen animations */
+@keyframes neuralPulse {
+  0%, 100% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2);
+  }
+}
+
+@keyframes loadingReveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated background orbs */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.orb-1 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(78, 213, 205, 0.07) 0%, transparent 70%);
+  top: -100px;
+  left: -200px;
+  animation: orbDrift1 22s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(78, 213, 205, 0.05) 0%, transparent 70%);
+  top: 40%;
+  right: -150px;
+  animation: orbDrift2 28s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(78, 213, 205, 0.04) 0%, transparent 70%);
+  bottom: 10%;
+  left: 30%;
+  animation: orbDrift3 18s ease-in-out infinite;
+}
+
+@keyframes orbDrift1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(80px, 60px) scale(1.08); }
+  66% { transform: translate(-40px, 100px) scale(0.95); }
+}
+
+@keyframes orbDrift2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(-100px, -80px) scale(1.12); }
+  70% { transform: translate(50px, -40px) scale(0.92); }
+}
+
+@keyframes orbDrift3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-60px, -100px) scale(1.15); }
+}
+
+/* Dot grid background */
+.dot-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cah-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cah-accent);
+}
+
+::selection {
+  background: var(--color-cah-accent);
+  color: #000;
+}
