@@ -11,7 +11,7 @@ git pull origin main
 mkdir -p logs
 
 echo "→ Installing dependencies..."
-npm ci --omit=dev
+npm ci
 
 echo "→ Building..."
 npm run build
