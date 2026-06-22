@@ -8,6 +8,8 @@ echo "→ Pulling latest code..."
 cd "$APP_DIR"
 git pull origin main
 
+mkdir -p logs
+
 echo "→ Installing dependencies..."
 npm ci --omit=dev
 

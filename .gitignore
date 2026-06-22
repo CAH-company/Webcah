@@ -53,5 +53,8 @@ pm2-*.log
 # Claude Code local settings
 .claude/
 
+# Internal docs
+README.md
+
 # oferta / dokumenty wewnętrzne
 *.pdf
